@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="178px" height="140px" viewBox="0 0 178 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>G14</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Atomframer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="常规元素-copy" transform="translate(-206.000000, -1192.000000)">
+            <g id="G14" transform="translate(206.000000, 1192.000000)">
+                <rect id="Rectangle-13-Copy-13" fill="#FFFFFF" x="0" y="0" width="178" height="140" rx="3"></rect>
+                <path d="M39.8,44 L138.2,44 L138.2,44 C140.850967,44 143,46.1490332 143,48.8 L143,63.2 C143,65.8509668 140.850967,68 138.2,68 L39.8,68 L39.8,68 C37.1490332,68 35,65.8509668 35,63.2 L35,48.8 L35,48.8 C35,46.1490332 37.1490332,44 39.8,44 L39.8,44 Z M46.8,50 L46.8,50 C44.1490332,50 42,52.1490332 42,54.8 L42,57.2 C42,59.8509668 44.1490332,62 46.8,62 L131.2,62 C133.850967,62 136,59.8509668 136,57.2 L136,54.8 C136,52.1490332 133.850967,50 131.2,50 L46.8,50 Z M89,58 C87.8954305,58 87,57.1045695 87,56 C87,54.8954305 87.8954305,54 89,54 C90.1045695,54 91,54.8954305 91,56 C91,57.1045695 90.1045695,58 89,58 Z M95,58 C93.8954305,58 93,57.1045695 93,56 C93,54.8954305 93.8954305,54 95,54 C96.1045695,54 97,54.8954305 97,56 C97,57.1045695 96.1045695,58 95,58 Z M83,58 C81.8954305,58 81,57.1045695 81,56 C81,54.8954305 81.8954305,54 83,54 C84.1045695,54 85,54.8954305 85,56 C85,57.1045695 84.1045695,58 83,58 Z" id="Combined-Shape-Copy-8" fill="#404040"></path>
+                <text id="整行按钮" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" fill="#767676">
+                    <tspan x="65" y="110">整行按钮</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="178px" height="140px" viewBox="0 0 178 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>G9</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Atomframer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="常规元素-copy" transform="translate(-15.000000, -806.000000)">
+            <g id="G9" transform="translate(15.000000, 806.000000)">
+                <rect id="Rectangle-13-Copy-8" fill="#FFFFFF" x="0" y="0" width="178" height="140" rx="3"></rect>
+                <text id="播放器" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" fill="#767676">
+                    <tspan x="71" y="110">播放器</tspan>
+                </text>
+                <g id="Group-2-Copy-2" transform="translate(35.000000, 34.000000)" fill="#404040">
+                    <g id="Group-2-Copy">
+                        <rect id="Combined-Shape-Copy-2" x="0" y="0" width="108" height="43.2" rx="4.8"></rect>
+                    </g>
+                </g>
+                <polygon id="Triangle-2" fill="#FFFFFF" transform="translate(90.000000, 56.000000) rotate(90.000000) translate(-90.000000, -56.000000) " points="90 51 96 61 84 61"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

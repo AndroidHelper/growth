@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="178px" height="140px" viewBox="0 0 178 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>G8</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Atomframer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="常规元素-copy" transform="translate(-206.000000, -613.000000)">
+            <g id="G8" transform="translate(206.000000, 613.000000)">
+                <rect id="Rectangle-13-Copy-7" fill="#FFFFFF" x="0" y="0" width="178" height="140" rx="3"></rect>
+                <text id="图片" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" fill="#767676">
+                    <tspan x="77" y="110">图片</tspan>
+                </text>
+                <g id="Group-2" transform="translate(35.000000, 34.000000)" fill="#404040">
+                    <g id="Group-2-Copy">
+                        <rect id="Combined-Shape-Copy-2" x="0" y="0" width="108" height="43.2" rx="4.8"></rect>
+                    </g>
+                </g>
+                <path d="M96.9304029,61.9351449 L81.9304029,61.9351449 L81.9304029,58.5420508 L86.6533987,51.4777587 L92.3600557,58.5420508 L96.9304029,55.7162435 L96.9304029,61.9351449 Z M92.7626747,52.1840975 C92.7626747,53.3550733 93.6967862,54.3033399 94.8453167,54.3033399 C95.9960692,54.3033399 96.9301807,53.3550733 96.9301807,52.1840975 C96.9301807,51.0131217 95.9960692,50.0648551 94.8453167,50.0648551 C93.6970084,50.0648551 92.7626747,51.0131217 92.7626747,52.1840975 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

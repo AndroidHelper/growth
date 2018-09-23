@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="178px" height="140px" viewBox="0 0 178 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>G10</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Atomframer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="常规元素-copy" transform="translate(-206.000000, -806.000000)">
+            <g id="G10" transform="translate(206.000000, 806.000000)">
+                <rect id="Rectangle-13-Copy-12" fill="#FFFFFF" x="0" y="0" width="178" height="140" rx="3"></rect>
+                <text id="地图" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" fill="#767676">
+                    <tspan x="77" y="110">地图</tspan>
+                </text>
+                <g id="Group-2-Copy-3" transform="translate(35.000000, 34.000000)" fill="#404040">
+                    <g id="Group-2-Copy">
+                        <rect id="Combined-Shape-Copy-2" x="0" y="0" width="108" height="43.2" rx="4.8"></rect>
+                    </g>
+                </g>
+                <g id="地图-copy" transform="translate(83.000000, 48.000000)" fill-rule="nonzero" fill="#FFFFFF">
+                    <path d="M5.99999066,0 C2.68640247,0 0,2.68640352 0,6.00001167 C0,9.31361983 5.99999066,16 5.99999066,16 C5.99999066,16 12,9.31360114 12,6.00001167 C12,2.6864222 9.31359753,0 5.99999066,0 Z M5.99999066,8.49999942 C4.34319657,8.49999942 2.99999532,7.15679765 2.99999532,5.50000291 C2.99999532,3.84277878 4.34319657,2.49998775 5.99999066,2.49998775 C7.65719549,2.49998775 9.00037805,3.84277878 9.00037805,5.50000291 C9.00037807,7.15681633 7.65719549,8.49999942 5.99999066,8.49999942 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

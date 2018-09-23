@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="178px" height="140px" viewBox="0 0 178 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>L12</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Atomframer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="列表及表单-copy" transform="translate(-206.000000, -999.000000)">
+            <g id="L12" transform="translate(206.000000, 999.000000)">
+                <rect id="Rectangle-13-Copy-14" fill="#FFFFFF" x="0" y="0" width="178" height="140" rx="3"></rect>
+                <text id="带预览的头像列表项" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" fill="#767676">
+                    <tspan x="35" y="110">带预览的头像列表项</tspan>
+                </text>
+                <path d="M39.8,34 L138.2,34 C140.850967,34 143,36.1490332 143,38.8 L143,72.4 C143,75.0509668 140.850967,77.2 138.2,77.2 L39.8,77.2 C37.1490332,77.2 35,75.0509668 35,72.4 L35,38.8 L35,38.8 C35,36.1490332 37.1490332,34 39.8,34 L39.8,34 Z M56.5,42 L56.5,42 C49.0441559,42 43,48.0441559 43,55.5 L43,55.5 C43,62.9558441 49.0441559,69 56.5,69 C63.9558441,69 70,62.9558441 70,55.5 L70,55.5 C70,48.0441559 63.9558441,42 56.5,42 L56.5,42 Z M78,43 L78,47 L99,47 L99,43 L78,43 Z M78,57 L78,61 L120,61 L120,57 L78,57 Z M78,64 L78,68 L120,68 L120,64 L78,64 Z" id="Combined-Shape-Copy-9" fill="#404040"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>share-2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Atomframer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-208.000000, -166.000000)" fill-rule="nonzero">
+            <g id="share-2" transform="translate(208.000000, 166.000000)">
+                <rect id="Rectangle-Copy-13" fill="#FFFFFF" x="0" y="0" width="29" height="29" rx="4"></rect>
+                <path d="M20,18 C18.9,18 17.9,18.5 17.2,19.2 L11.9,16.1 C11.9,15.7 12,15.4 12,15 C12,14.6 11.9,14.3 11.8,13.9 L17.1,10.8 C17.9,11.5 18.9,12 20,12 C22.2,12 24,10.2 24,8 C24,5.8 22.2,4 20,4 C17.8,4 16,5.8 16,8 C16,8.4 16.1,8.7 16.2,9.1 L10.8,12.2 C10.1,11.5 9.1,11 8,11 C5.8,11 4,12.8 4,15 C4,17.2 5.8,19 8,19 C9.1,19 10.1,18.5 10.8,17.8 L16.1,20.9 C16.1,21.3 16,21.6 16,22 C16,24.2 17.8,26 20,26 C22.2,26 24,24.2 24,22 C24,19.8 22.2,18 20,18 L20,18 Z M20,6 C21.1,6 22,6.9 22,8 C22,9.1 21.1,10 20,10 C18.9,10 18,9.1 18,8 C18,6.9 18.9,6 20,6 Z M8,17 C6.9,17 6,16.1 6,15 C6,13.9 6.9,13 8,13 C9.1,13 10,13.9 10,15 C10,16.1 9.1,17 8,17 Z M20,24 C18.9,24 18,23.1 18,22 C18,21.6 18.1,21.3 18.3,21 C18.3,21 18.3,21 18.3,21 C18.3,21 18.3,21 18.3,21 C18.6,20.4 19.3,20 20,20 C21.1,20 22,20.9 22,22 C22,23.1 21.1,24 20,24 Z" id="Shape" fill="#ABB4BD"></path>
+            </g>
+        </g>
+    </g>
+</svg>

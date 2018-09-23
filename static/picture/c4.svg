@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="178px" height="140px" viewBox="0 0 178 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>C4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Atomframer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="内容容器-copy" transform="translate(-206.000000, -227.000000)">
+            <g id="C4" transform="translate(206.000000, 227.000000)">
+                <rect id="Rectangle-13-Copy-3" fill="#FFFFFF" x="0" y="0" width="178" height="140" rx="3"></rect>
+                <text id="条状页面指示器" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" fill="#767676">
+                    <tspan x="47" y="110">条状页面指示器</tspan>
+                </text>
+                <rect id="Rectangle-16-Copy" fill="#404040" opacity="0.0800000057" x="36" y="54" width="106" height="3" rx="1.5"></rect>
+                <path d="M37.5,54 L72,54 L72,57 L37.5,57 L37.5,57 C36.6715729,57 36,56.3284271 36,55.5 L36,55.5 L36,55.5 C36,54.6715729 36.6715729,54 37.5,54 Z" id="Rectangle-16-Copy-2" fill="#404040"></path>
+            </g>
+        </g>
+    </g>
+</svg>

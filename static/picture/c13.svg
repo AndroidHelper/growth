@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="178px" height="140px" viewBox="0 0 178 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>C13</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Atomframer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="内容容器-copy" transform="translate(-15.000000, -1192.000000)">
+            <g id="C13" transform="translate(15.000000, 1192.000000)">
+                <rect id="Rectangle-13-Copy-9" fill="#FFFFFF" x="0" y="0" width="178" height="140" rx="3"></rect>
+                <text id="中尺寸水平滚动卡片辑" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" fill="#767676">
+                    <tspan x="29" y="114">中尺寸水平滚动卡片辑</tspan>
+                </text>
+                <g id="Group-10" transform="translate(37.000000, 27.000000)" fill="#404040">
+                    <path d="M100.8,0 L104,0 L104,43.2 L100.8,43.2 L100.8,43.2 C98.1490332,43.2 96,41.0509668 96,38.4 L96,4.8 L96,4.8 C96,2.1490332 98.1490332,1.37515312e-15 100.8,8.8817842e-16 Z" id="Combined-Shape-Copy-10"></path>
+                    <g id="Group-7-Copy">
+                        <g id="Group-4-Copy-4">
+                            <rect id="Combined-Shape" x="0" y="0" width="43" height="43" rx="4.80000019"></rect>
+                            <rect id="Combined-Shape-Copy" x="49" y="0" width="43" height="43" rx="4.80000019"></rect>
+                        </g>
+                        <rect id="Rectangle-11" opacity="0.249999985" x="1" y="48" width="40" height="4"></rect>
+                        <rect id="Rectangle-11-Copy-2" opacity="0.249999985" x="1" y="55" width="35" height="4"></rect>
+                        <rect id="Rectangle-11-Copy" opacity="0.249999985" x="50" y="48" width="40" height="4"></rect>
+                        <rect id="Rectangle-11-Copy-3" opacity="0.249999985" x="50" y="55" width="35" height="4"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

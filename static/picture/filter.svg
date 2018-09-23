@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>filter</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Atomframer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-247.000000, -10.000000)" fill-rule="nonzero">
+            <g id="filter" transform="translate(247.000000, 10.000000)">
+                <rect id="Rectangle" fill="#FFFFFF" x="0.483333333" y="0" width="28.0333333" height="29" rx="4"></rect>
+                <path d="M25.0357217,5.6 C24.8423884,5.2 24.5523884,5 24.1657217,5 L4.8323884,5 C4.44572174,5 4.15572174,5.2 3.9623884,5.6 C3.76905507,5.9 3.86572174,6.3 4.05905507,6.6 L11.5990551,15.8 L11.5990551,22 C11.5990551,22.4 11.7923884,22.7 12.1790551,22.9 L16.0457217,24.9 C16.1423884,25 16.2390551,25 16.4323884,25 C16.6257217,25 16.8190551,25 16.9157217,24.9 C17.2057217,24.7 17.3990551,24.4 17.3990551,24 L17.3990551,15.8 L24.9390551,6.6 C25.1323884,6.3 25.2290551,5.9 25.0357217,5.6 Z M15.6590551,14.8 C15.5623884,15 15.4657217,15.2 15.4657217,15.5 L15.4657217,22.4 L13.5323884,21.4 L13.5323884,15.5 C13.5323884,15.3 13.4357217,15 13.3390551,14.9 L6.95905507,7 L22.1357217,7 L15.6590551,14.8 L15.6590551,14.8 Z" id="Shape" fill="#ABB4BD"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>calendar</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Atomframer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-49.000000, -10.000000)" fill-rule="nonzero">
+            <g id="calendar" transform="translate(49.000000, 10.000000)">
+                <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="29" height="29" rx="4"></rect>
+                <path d="M21.5,5 L19.5,5 L19.5,4 C19.5,3.4 19.1,3 18.5,3 C17.9,3 17.5,3.4 17.5,4 L17.5,5 L11.5,5 L11.5,4 C11.5,3.4 11.1,3 10.5,3 C9.9,3 9.5,3.4 9.5,4 L9.5,5 L7.5,5 C5.8,5 4.5,6.3 4.5,8 L4.5,22 C4.5,23.7 5.8,25 7.5,25 L21.5,25 C23.2,25 24.5,23.7 24.5,22 L24.5,8 C24.5,6.3 23.2,5 21.5,5 Z M7.5,7 L9.5,7 L9.5,8 C9.5,8.6 9.9,9 10.5,9 C11.1,9 11.5,8.6 11.5,8 L11.5,7 L17.5,7 L17.5,8 C17.5,8.6 17.9,9 18.5,9 C19.1,9 19.5,8.6 19.5,8 L19.5,7 L21.5,7 C22.1,7 22.5,7.4 22.5,8 L22.5,11 L6.5,11 L6.5,8 C6.5,7.4 6.9,7 7.5,7 Z M21.5,23 L7.5,23 C6.9,23 6.5,22.6 6.5,22 L6.5,13 L22.5,13 L22.5,22 C22.5,22.6 22.1,23 21.5,23 Z" id="Shape" fill="#ABB4BD"></path>
+            </g>
+        </g>
+    </g>
+</svg>

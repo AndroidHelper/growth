@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>folder</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Atomframer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-10.000000, -88.000000)" fill-rule="nonzero">
+            <g id="folder" transform="translate(10.000000, 88.000000)">
+                <rect id="Rectangle" fill="#FFFFFF" x="0.483333333" y="0" width="28.0333333" height="29" rx="4"></rect>
+                <path d="M22.2333333,8 L14.0166667,8 L12.3733333,5.4 C12.18,5.2 11.89,5 11.6,5 L6.76666667,5 C5.12333333,5 3.86666667,6.3 3.86666667,8 L3.86666667,22 C3.86666667,23.7 5.12333333,25 6.76666667,25 L22.2333333,25 C23.8766667,25 25.1333333,23.7 25.1333333,22 L25.1333333,11 C25.1333333,9.3 23.8766667,8 22.2333333,8 Z M23.2,22 C23.2,22.6 22.8133333,23 22.2333333,23 L6.76666667,23 C6.18666667,23 5.8,22.6 5.8,22 L5.8,8 C5.8,7.4 6.18666667,7 6.76666667,7 L11.1166667,7 L12.76,9.6 C12.9533333,9.8 13.2433333,10 13.5333333,10 L22.2333333,10 C22.8133333,10 23.2,10.4 23.2,11 L23.2,22 Z" id="Shape" fill="#ABB4BD"></path>
+            </g>
+        </g>
+    </g>
+</svg>

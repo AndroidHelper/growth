@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>shopping</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Atomframer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-208.000000, -10.000000)" fill-rule="nonzero">
+            <g id="shopping" transform="translate(208.000000, 10.000000)">
+                <rect id="Rectangle-Copy-15" fill="#FFFFFF" x="0" y="0" width="29" height="29" rx="4"></rect>
+                <path d="M12,24 C12,25.105 11.105,26 10,26 C8.895,26 8,25.105 8,24 C8,22.895 8.895,22 10,22 C11.105,22 12,22.895 12,24 Z" id="Shape" fill="#ABB4BD"></path>
+                <path d="M23,24 C23,25.105 22.105,26 21,26 C19.895,26 19,25.105 19,24 C19,22.895 19.895,22 21,22 C22.105,22 23,22.895 23,24 Z" id="Shape" fill="#ABB4BD"></path>
+                <path d="M24.8,8.4 C24.6,8.1 24.3,8 24,8 L7.8,8 L7,3.8 C6.9,3.3 6.5,3 6,3 L2,3 C1.4,3 1,3.4 1,4 C1,4.6 1.4,5 2,5 L5.2,5 L6,9.2 C6,9.2 6,9.3 6,9.3 L7.7,17.6 C8,19 9.2,20 10.6,20 C10.6,20 10.6,20 10.7,20 L20.4,20 C21.9,20 23.1,19 23.4,17.6 L25,9.2 C25,8.9 25,8.6 24.8,8.4 Z M21.4,17.2 C21.3,17.7 20.9,18 20.4,18 L10.7,18 C10.2,18 9.8,17.7 9.7,17.2 L8.2,10 L22.8,10 L21.4,17.2 Z" id="Shape" fill="#ABB4BD"></path>
+            </g>
+        </g>
+    </g>
+</svg>

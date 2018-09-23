@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="178px" height="140px" viewBox="0 0 178 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>C2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Atomframer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="内容容器-copy" transform="translate(-206.000000, -34.000000)">
+            <g id="C2" transform="translate(206.000000, 34.000000)">
+                <rect id="Rectangle-13-Copy" fill="#FFFFFF" x="0" y="0" width="178" height="140" rx="3"></rect>
+                <text id="轮播图" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" fill="#767676">
+                    <tspan x="71" y="110">轮播图</tspan>
+                </text>
+                <g id="Group" transform="translate(35.000000, 34.000000)" fill="#404040">
+                    <path d="M16.8,0 L91.2,0 C93.8509668,-4.86974701e-16 96,2.1490332 96,4.8 L96,38.4 C96,41.0509668 93.8509668,43.2 91.2,43.2 L16.8,43.2 L16.8,43.2 C14.1490332,43.2 12,41.0509668 12,38.4 L12,4.8 L12,4.8 C12,2.1490332 14.1490332,2.26333154e-15 16.8,1.77635684e-15 L16.8,0 Z M21.6,28.6 L21.6,34.6 L44.4,34.6 L44.4,28.6 L21.6,28.6 Z" id="Combined-Shape"></path>
+                    <path d="M104.8,0 L108,0 L108,43.2 L104.8,43.2 L104.8,43.2 C102.149033,43.2 100,41.0509668 100,38.4 L100,4.8 L100,4.8 C100,2.1490332 102.149033,1.37515312e-15 104.8,8.8817842e-16 Z" id="Combined-Shape-Copy-10"></path>
+                    <path d="M4.8,0 L8,0 L8,43.2 L4.8,43.2 L4.8,43.2 C2.1490332,43.2 1.21282822e-15,41.0509668 8.8817842e-16,38.4 L0,4.8 L-8.8817842e-16,4.8 C-1.21282822e-15,2.1490332 2.1490332,1.37515312e-15 4.8,8.8817842e-16 Z" id="Combined-Shape-Copy-12" transform="translate(4.000000, 21.600000) scale(-1, 1) translate(-4.000000, -21.600000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

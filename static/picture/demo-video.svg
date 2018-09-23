@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="345px" height="166px" viewBox="0 0 345 166" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 11</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Atomframer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-1112.000000, -219.000000)">
+            <g id="Group-11" transform="translate(1112.000000, 219.000000)">
+                <g id="Group-10-Copy-2" fill="#F1F1F3">
+                    <rect id="Rectangle-3" x="0" y="0" width="345" height="165.549451"></rect>
+                </g>
+                <rect id="Rectangle-5-Copy-2" fill="#FFFFFF" x="20" y="145" width="306" height="4" rx="2"></rect>
+                <path d="M22,145 L135,145 L135,149 L22,149 L22,149 C20.8954305,149 20,148.104569 20,147 L20,147 L20,147 C20,145.895431 20.8954305,145 22,145 Z" id="Rectangle-5-Copy-3" fill="#787879" opacity="0.440000027"></path>
+                <circle id="Oval-2-Copy" fill="#949494" cx="132" cy="147" r="4"></circle>
+                <g id="视频-copy" opacity="0.5" transform="translate(158.000000, 67.000000)" fill-rule="nonzero" fill="#000000">
+                    <path d="M14.5,0 C6.49210448,0 0,6.49210448 0,14.5 C0,22.5076791 6.49210448,29 14.5,29 C22.5078955,29 29,22.5078955 29,14.5 C29,6.49188806 22.5078955,0 14.5,0 Z M11.0881716,20.4703209 L11.0881716,9.38236567 L20.4705373,14.9265597 L11.0881716,20.4703209 Z" id="Shape" opacity="0.300000012"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="178px" height="140px" viewBox="0 0 178 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>C11</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Atomframer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="内容容器-copy" transform="translate(-15.000000, -999.000000)">
+            <g id="C11" transform="translate(15.000000, 999.000000)">
+                <rect id="Rectangle-13-Copy-10" fill="#FFFFFF" x="0" y="0" width="178" height="140" rx="3"></rect>
+                <text id="3x-卡片辑" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" fill="#767676">
+                    <tspan x="62.348" y="110">3x 卡片辑</tspan>
+                </text>
+                <g id="Group-8" transform="translate(35.000000, 33.000000)" fill="#404040">
+                    <rect id="Rectangle" opacity="0.249999985" x="2" y="38" width="29" height="3"></rect>
+                    <rect id="Rectangle-Copy-3" opacity="0.249999985" x="2" y="43" width="19" height="3"></rect>
+                    <rect id="Rectangle-Copy" opacity="0.249999985" x="39" y="38" width="29" height="3"></rect>
+                    <rect id="Rectangle-Copy-4" opacity="0.249999985" x="39" y="43" width="19" height="3"></rect>
+                    <rect id="Rectangle-Copy-2" opacity="0.249999985" x="77" y="38" width="29" height="3"></rect>
+                    <rect id="Rectangle-Copy-5" opacity="0.249999985" x="77" y="43" width="19" height="3"></rect>
+                    <g id="Group-4-Copy-5">
+                        <g id="Group-5" transform="translate(0.380282, 0.000000)">
+                            <rect id="Combined-Shape" x="0" y="0" width="32.7042254" height="33" rx="3.65070437"></rect>
+                            <rect id="Combined-Shape-Copy" x="37.2676056" y="0" width="32.7042254" height="33" rx="3.65070437"></rect>
+                            <rect id="Combined-Shape-Copy-3" x="74.5352113" y="0" width="32.7042254" height="33" rx="3.65070437"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
