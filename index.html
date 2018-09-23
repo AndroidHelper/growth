@@ -1,1 +1,4261 @@
 
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+	<title>Atomframer</title>
+	<meta name="keywords" content="在线原型设计工具,在线界面设计工具,在线线框图设计工具" />
+	<meta name="description" content="Atomframer是一款使用组件快速搭建界面原型的设计工具，帮助产品设计人员更有效地沟通。" />
+	<meta name="author" content="kakitdesign">
+	<script src="static/js/jquery-3.2.1.min.js"></script>
+	<script src="static/js/jquery-ui.min.js"></script>
+	<!--将dom转为canvas-->
+	<script src="static/js/html2canvas.js"></script>
+
+	<!--将canvas转为图片并下载-->
+	<script src="static/js/canvas2image.js"></script>
+	<link href="static/css/style.css" rel="stylesheet" />
+
+</head>
+
+<body oncontextmenu="return false;" onselectstart="return false">
+	<div class="loading"></div>
+	<div id="cover"></div>
+	<div id="modal"><img src="static/picture/author.jpg" width="469.5px" height:="289px"></div>
+
+	<div class="main">
+
+		<!---------------------------------------------------------------------------------------->
+		<!--顶端导航-->
+
+		<div class="navbar clearfix">
+			<span class="brand">
+				<a href="#">
+					<img src="static/picture/atomframer.svg" alt= "Atomframer" width="168px" height:="21px">
+				</a>
+			</span>
+			<span class="author" onmouseover=style.cursor="pointer">
+				<img src="static/picture/user.svg" width="16px" height:="16px">&nbsp;联系作者
+			</span>
+		</div>
+
+		<!---------------------------------------------------------------------------------------->
+		<!--工作台-->
+
+		<div class="workbench clearfix">
+
+			<!---------------------------------------------------------------------------------------->
+			<!--导航侧栏-->
+
+			<div class="nav-sidebar">
+
+				<!---------------------------------------------------------------------------------------->
+				<!--标题: 导航栏-->
+
+				<div class="nav-header underline">
+					<a href="#">&nbsp;
+						<img src="static/picture/btn_left.png" width="6px" height:="6px">&nbsp;&nbsp;
+						导航栏&nbsp;&nbsp;<span class="sec">Navigation Bar</span>
+					</a>
+				</div>
+
+				<!---------------------------------------------------------------------------------------->
+				<!--容器: 导航栏-->
+
+				<div class="nav-container underline tipsClass1 clearfix">
+					<div class="tips tipstutorials1">点击卡片<br/>以切换栏</div>
+					<div id="N1P" class="block Nblock" onmouseover=style.cursor="pointer"></div>
+					<div id="N2P" class="block Nblock" onmouseover=style.cursor="pointer"></div>
+					<div id="N3P" class="block Nblock" onmouseover=style.cursor="pointer"></div>
+					<div id="N4P" class="block Nblock" onmouseover=style.cursor="pointer"></div>
+					<div id="N5P" class="block Nblock" onmouseover=style.cursor="pointer"></div>
+					<div id="N6P" class="block Nblock" onmouseover=style.cursor="pointer"></div>
+					<div id="N7P" class="block Nblock" onmouseover=style.cursor="pointer"></div>
+					<div id="N8P" class="block Nblock" onmouseover=style.cursor="pointer"></div>
+				</div>
+
+				<!---------------------------------------------------------------------------------------->
+				<!--标题: 范围栏-->
+
+				<div class="nav-header underline">
+					<a href="#">&nbsp;
+						<img src="static/picture/btn_left.png" width="6px" height:="6px">&nbsp;&nbsp;
+						范围栏&nbsp;&nbsp;<span class="sec">Scope Bar</span>
+						</a>
+				</div>
+
+				<!---------------------------------------------------------------------------------------->
+				<!--容器: 范围栏-->
+
+				<div class="nav-container underline tipsClass2 clearfix">
+					<div class="tips tipstutorials2">点击卡片<br/>以切换栏</div>
+					<div id="S1P" class="block Sblock" onmouseover=style.cursor="pointer"></div>
+					<div id="S2P" class="block Sblock" onmouseover=style.cursor="pointer"></div>
+					<div id="S3P" class="block Sblock" onmouseover=style.cursor="pointer"></div>
+					<div id="S4P" class="block Sblock" onmouseover=style.cursor="pointer"></div>
+					<div id="S5P" class="block Sblock" onmouseover=style.cursor="pointer"></div>
+					<div id="S6P" class="block Sblock" onmouseover=style.cursor="pointer"></div>
+					<div id="S7P" class="block Sblock" onmouseover=style.cursor="pointer"></div>
+					<div id="S8P" class="block Sblock" onmouseover=style.cursor="pointer"></div>
+					<div id="S9P" class="block Sblock" onmouseover=style.cursor="pointer"></div>
+					</a>
+				</div>
+
+				<!---------------------------------------------------------------------------------------->
+				<!--标题: 标签栏-->
+
+				<div class="nav-header underline">
+					<a href="#">&nbsp;
+						<img src="static/picture/btn_left.png" width="6px" height:="6px">&nbsp;&nbsp;
+						标签栏&nbsp;&nbsp;<span class="sec">Tab Bar & Tool Bar</span></a>
+				</div>
+
+				<!---------------------------------------------------------------------------------------->
+				<!--容器: 标签栏-->
+
+				<div class="nav-container underline tipsClass3 clearfix">
+					<div class="tips tipstutorials3">点击卡片<br/>以切换栏</div>
+					<div id="B1P" class="block Bblock" onmouseover=style.cursor="pointer"></div>
+					<div id="B2P" class="block Bblock" onmouseover=style.cursor="pointer"></div>
+					<div id="B3P" class="block Bblock" onmouseover=style.cursor="pointer"></div>
+					<div id="B4P" class="block Bblock" onmouseover=style.cursor="pointer"></div>
+					<div id="B5P" class="block Bblock" onmouseover=style.cursor="pointer"></div>
+					<div id="B6P" class="block Bblock" onmouseover=style.cursor="pointer"></div>
+					<div id="B7P" class="block Bblock" onmouseover=style.cursor="pointer"></div>
+					<div id="B8P" class="block Bblock" onmouseover=style.cursor="pointer"></div>
+					<div id="B9P" class="block Bblock" onmouseover=style.cursor="pointer"></div>
+					<div id="B10P" class="block Bblock" onmouseover=style.cursor="pointer"></div>
+				</div>
+
+				<!---------------------------------------------------------------------------------------->
+				<!--标题: 常规元素-->
+
+				<div class="nav-header underline">
+					<a href="#">&nbsp;
+						<img src="static/picture/btn_left.png" width="6px" height:="6px">&nbsp;&nbsp;
+						常规元素&nbsp;&nbsp;<span class="sec">General Element</span></a>
+				</div>
+
+				<!---------------------------------------------------------------------------------------->
+				<!--容器: 常规元素-->
+
+				<div class="nav-container underline tipsClass4 clearfix">
+					<div class="tips tipstutorials4">拖动卡片<br/>添加元件</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--大标题-->
+
+					<img src="static/picture/g1.svg" data-ele='<div class="ele-box general-heading-l clearfix" id="G1" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+							<div id="G1_Heading" class="head">Heading</div>
+							<div id="G1_More" class="more">view more</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--中标题-->
+
+					<img src="static/picture/g2.svg" data-ele='<div class="ele-box general-heading-m clearfix" id="G2" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div id="G2_Heading" class="head">Heading</div>
+						<div id="G2_More" class="more">view more</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--小标题-->
+
+					<img src="static/picture/g3.svg" data-ele='<div class="ele-box general-heading-s clearfix" id="G3" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div id="G3_Heading" class="head">Heading</div>
+						<div id="G3_More" class="more">view more</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--文段-->
+
+					<img src="static/picture/g4.svg" data-ele='<div class="ele-box general-paragraph clearfix" id="G4" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<p id="G4_Description">This is a sample paragraph, please change the content.You can change this paragraph in the sidebar on the right.</p>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--分隔线-->
+
+					<img src="static/picture/g5.svg" data-ele='<div class="ele-box general-boundary clearfix" id="G5" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--大间距-->
+
+					<img src="static/picture/g6.svg" data-ele='<div class="ele-box general-spacer-l clearfix" id="G6" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--小间距-->
+
+					<img src="static/picture/g7.svg" data-ele='<div class="ele-box general-spacer-s clearfix" id="G7" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--图片-->
+
+					<img src="static/picture/g8.svg" data-ele='<div class="ele-box general-picture clearfix" id="G8" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div><img src="static/picture/demo-pic.svg" width="335px" height:="161px"></div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--播放器-->
+
+					<img src="static/picture/g9.svg" data-ele='<div class="ele-box general-video clearfix" id="G9" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div><img src="static/picture/demo-video.svg" width="335px" height:="161px"></div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--地图-->
+
+					<img src="static/picture/g10.svg" data-ele='<div class="ele-box general-map clearfix" id="G10" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div><img src="static/picture/demo-map.svg" width="335px" height:="161px"></div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--左对齐按钮-->
+
+					<img src="static/picture/g11.svg" data-ele='<div class="ele-box general-button-l clearfix" id="G11" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div id="G11_Button" class="button">Button Action</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--居中对齐按钮-->
+
+					<img src="static/picture/g12.svg" data-ele='<div class="ele-box general-button-c clearfix" id="G12" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div id="G12_Button" class="button">Button Action</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--右对齐按钮-->
+
+					<img src="static/picture/g13.svg" data-ele='<div class="ele-box general-button-r clearfix" id="G13" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div id="G13_Button" class="button">Button Action</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--整行按钮-->
+
+					<img src="static/picture/g14.svg" data-ele='<div class="ele-box general-button-fullline clearfix" id="G14" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div id="G14_Button" class="button">Button Action</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--按钮组-->
+
+					<img src="static/picture/g15.svg" data-ele='<div class="ele-box general-button-2 clearfix" id="G15" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div id="G15_Button1" class="button-l">Button Action</div>
+						<div id="G15_Button2" class="button-r">Button Action</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--注释专用占位符-->
+
+					<img src="static/picture/g16.svg" data-ele='<div class="ele-box general-annotation clearfix" id="G16" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="annotation">
+							<p id="G16_Annotation">该占位符的作用：在没有相对控件支持时，使用文字注释描述区块的作用。</p>
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+
+				</div>
+
+				<!---------------------------------------------------------------------------------------->
+				<!--标题: 页内导航-->
+
+				<div class="nav-header underline">
+					<a href="#">&nbsp;
+						<img src="static/picture/btn_left.png" width="6px" height:="6px">&nbsp;&nbsp;
+						页内导航&nbsp;&nbsp;<span class="sec">Content Navigation</span></a>
+				</div>
+
+				<!---------------------------------------------------------------------------------------->
+				<!--容器: 页内导航-->
+
+				<div class="nav-container underline tipsClass5 clearfix">
+					<div class="tips tipstutorials5">拖动卡片<br/>添加元件</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--3x 图标组-->
+
+					<img src="static/picture/cn1.svg" data-ele='<div class="ele-box cnav-icongroup-3 clearfix" id="CN1" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="boundary clearfix">
+							<div class="Icon1"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+							<div class="Icon2"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+							<div class="Icon3"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="final-icon" /></div>
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--4x 图标组-->
+
+					<img src="static/picture/cn2.svg" data-ele='<div class="ele-box cnav-icongroup-4 clearfix" id="CN2" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="boundary clearfix">
+							<div class="Icon1"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+							<div class="Icon2"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+							<div class="Icon3"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+							<div class="Icon4"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="final-icon" /></div>
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--5x 图标组-->
+
+					<img src="static/picture/cn3.svg" data-ele='<div class="ele-box cnav-icongroup-5 clearfix" id="CN3" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="boundary clearfix">
+							<div class="Icon1"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+							<div class="Icon2"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+							<div class="Icon3"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+							<div class="Icon4"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+							<div class="Icon5"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="final-icon" /></div>
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--4x 宫格-->
+
+					<img src="static/picture/cn4.svg" data-ele='<div class="ele-box cnav-grid-4 clearfix" id="CN4" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="Icon1"><img src="static/picture/icon-normal.svg" width="35px" height:="35px" class="icon" /></div>
+						<div class="Icon2"><img src="static/picture/icon-normal.svg" width="35px" height:="35px" class="icon" /></div>
+						<div class="Icon3"><img src="static/picture/icon-normal.svg" width="35px" height:="35px" class="icon" /></div>
+						<div class="Icon4"><img src="static/picture/icon-normal.svg" width="35px" height:="35px" class="icon" /></div>
+						<span id="CN4_Label1" class="label">Label</span>
+						<span id="CN4_Label2" class="label">Label</span>
+						<span id="CN4_Label3" class="label">Label</span>
+						<span id="CN4_Label4" class="label">Label</span>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--5x 宫格-->
+
+					<img src="static/picture/cn5.svg" data-ele='<div class="ele-box cnav-grid-5 clearfix" id="CN5" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="Icon1"><img src="static/picture/icon-normal.svg" width="35px" height:="35px" class="icon" /></div>
+						<div class="Icon2"><img src="static/picture/icon-normal.svg" width="35px" height:="35px" class="icon" /></div>
+						<div class="Icon3"><img src="static/picture/icon-normal.svg" width="35px" height:="35px" class="icon" /></div>
+						<div class="Icon4"><img src="static/picture/icon-normal.svg" width="35px" height:="35px" class="icon" /></div>
+						<div class="Icon5"><img src="static/picture/icon-normal.svg" width="35px" height:="35px" class="icon" /></div>
+						<span id="CN5_Label1" class="label">Label</span>
+						<span id="CN5_Label2" class="label">Label</span>
+						<span id="CN5_Label3" class="label">Label</span>
+						<span id="CN5_Label4" class="label">Label</span>
+						<span id="CN5_Label5" class="label">Label</span>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--3x 页内标签导航-->
+
+					<img src="static/picture/cn6.svg" data-ele='<div class="ele-box cnav-contenttabs-3 clearfix" id="CN6" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="outer-container">
+						<span id="CN6_Label1" class="label-a">Label</span>
+						<span id="CN6_Label2" class="label">Label</span>
+						<span id="CN6_Label3" class="label">Label</span>
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--4x 页内标签导航-->
+
+					<img src="static/picture/cn7.svg" data-ele='<div class="ele-box cnav-contenttabs-4 clearfix" id="CN7" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="outer-container">
+						<span id="CN7_Label1" class="label-a">Label</span>
+						<span id="CN7_Label2" class="label">Label</span>
+						<span id="CN7_Label3" class="label">Label</span>
+						<span id="CN7_Label4" class="label">Label</span>
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--5x 页内标签导航-->
+					<img src="static/picture/cn8.svg" data-ele='<div class="ele-box cnav-contenttabs-5 clearfix" id="CN8" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="outer-container">
+						<span id="CN8_Label1" class="label-a">Label</span>
+						<span id="CN8_Label2" class="label">Label</span>
+						<span id="CN8_Label3" class="label">Label</span>
+						<span id="CN8_Label4" class="label">Label</span>
+						<span id="CN8_Label5" class="label">Label</span>
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+				</div>
+
+				<!---------------------------------------------------------------------------------------->
+				<!--标题: 内容容器-->
+
+				<div class="nav-header underline">
+					<a href="#">&nbsp;
+						<img src="static/picture/btn_left.png" width="6px" height:="6px">&nbsp;&nbsp;
+						内容容器&nbsp;&nbsp;<span class="sec">Content Container</span></a>
+				</div>
+
+				<!---------------------------------------------------------------------------------------->
+				<!--容器: 内容容器-->
+
+				<div class="nav-container underline tipsClass6 clearfix">
+					<div class="tips tipstutorials6">拖动卡片<br/>添加元件</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--横幅-->
+
+					<img src="static/picture/c1.svg" data-ele='<div class="ele-box content-banner clearfix" id="C1" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="field">
+							<div id="C1_Description" class="title">Description</div>
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--轮播图-->
+
+					<img src="static/picture/c2.svg" data-ele='<div class="ele-box content-carousel clearfix" id="C2" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="pic-1"></div>
+						<div class="pic-2">
+							<div id="C2_Description" class="title">Description</div>
+						</div>
+						<div class="pic-3"></div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--页面指示器-->
+
+					<img src="static/picture/c3.svg" data-ele='<div class="ele-box content-indicator-c clearfix" id="C3" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<span><img src="static/picture/carousel.svg" width="40px" height="7px" class="img"></span>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--条状页面指示器-->
+
+					<img src="static/picture/c4.svg" data-ele='<div class="ele-box content-indicator-l clearfix" id="C4" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<span><img src="static/picture/carousel-s.svg" width="335px" height="3px" class="img"></span>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--2x 专辑-->
+
+					<img src="static/picture/c5.svg" data-ele='<div class="ele-box content-album-2 clearfix" id="C5" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div id="C5_Title1" class="pic-1">Title</div>
+						<div id="C5_Title2" class="pic-2">Title</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--3x 专辑-->
+
+					<img src="static/picture/c6.svg" data-ele='<div class="ele-box content-album-3 clearfix" id="C6" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div id="C6_Title1" class="pic-1">Title</div>
+						<div id="C6_Title2" class="pic-2">Title</div>
+						<div id="C6_Title3" class="pic-3">Title</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--大尺寸水平滚动专辑-->
+
+					<img src="static/picture/c7.svg" data-ele='<div class="ele-box content-horizontal-album-l clearfix" id="C7" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div id="C7_Title" class="pic-1">Title</div>
+						<div class="pic-2"></div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--中尺寸水平滚动专辑-->
+
+					<img src="static/picture/c8.svg" data-ele='<div class="ele-box content-horizontal-album-m clearfix" id="C8" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div id="C8_Title1" class="pic-1">Title</div>
+						<div id="C8_Title2" class="pic-2">Title</div>
+						<div class="pic-3"></div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--小尺寸水平滚动专辑-->
+
+					<img src="static/picture/c9.svg" data-ele='<div class="ele-box content-horizontal-album-s clearfix" id="C9" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div id="C9_Title1" class="pic-1">Title</div>
+						<div id="C9_Title2" class="pic-2">Title</div>
+						<div id="C9_Title3" class="pic-3">Title</div>
+						<div class="pic-4"></div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--2x 卡片辑-->
+
+					<img src="static/picture/c10.svg" data-ele='<div class="ele-box content-card-2 clearfix" id="C10" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="pic-1"></div>
+						<div class="pic-2"></div>
+						<div id="C10_Title1" class="title-1">Title</div>
+						<div id="C10_Title2" class="title-2">Title</div>
+						<div id="C10_Desc1" class="summary-1">Preview the content.</div>
+						<div id="C10_Desc2" class="summary-2">Preview the content.</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--3x 卡片辑-->
+
+					<img src="static/picture/c11.svg" data-ele='<div class="ele-box content-card-3 clearfix" id="C11" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="pic-1"></div>
+						<div class="pic-2"></div>
+						<div class="pic-3"></div>
+						<div id="C11_Title1" class="title-1">Title</div>
+						<div id="C11_Title2" class="title-2">Title</div>
+						<div id="C11_Title3" class="title-3">Title</div>
+						<div id="C11_Desc1" class="summary-1">Preview.</div>
+						<div id="C11_Desc2" class="summary-2">Preview.</div>
+						<div id="C11_Desc3" class="summary-3">Preview.</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--大尺寸水平滚动卡片辑-->
+
+					<img src="static/picture/c12.svg" data-ele='<div class="ele-box content-horizontal-card-l clearfix" id="C12" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="pic-1"></div>
+						<div class="pic-2"></div>
+						<div id="C12_Title" class="title">Horizontal Scroll Title</div>
+						<div id="C12_Description" class="summary">You can preview the content here,this item can hold more words.</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--中尺寸水平滚动卡片辑-->
+
+					<img src="static/picture/c13.svg" data-ele='<div class="ele-box content-horizontal-card-m clearfix" id="C13" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="pic-1"></div>
+						<div class="pic-2"></div>
+						<div class="pic-3"></div>
+						<div id="C13_Title1" class="title-1">Title</div>
+						<div id="C13_Title2" class="title-2">Title</div>
+						<div id="C13_Desc1" class="summary-1">Preview the content.</div>
+						<div id="C13_Desc2" class="summary-2">Preview the content.</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--小尺寸水平滚动卡片辑-->
+
+					<img src="static/picture/c14.svg" data-ele='<div class="ele-box content-horizontal-card-s clearfix" id="C14" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="pic-1"></div>
+						<div class="pic-2"></div>
+						<div class="pic-3"></div>
+						<div class="pic-4"></div>
+						<div id="C14_Title1" class="title-1">Title</div>
+						<div id="C14_Title2" class="title-2">Title</div>
+						<div id="C14_Title3" class="title-3">Title</div>
+						<div id="C14_Desc1" class="summary-1">Preview.</div>
+						<div id="C14_Desc2" class="summary-2">Preview.</div>
+						<div id="C14_Desc3" class="summary-3">Preview.</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--水平滚动缩略图列表-->
+
+					<img src="static/picture/c15.svg" data-ele='<div class="ele-box content-horizontal-list clearfix" id="C15" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="outer-container">
+						<img src="static/picture/thumbnail.svg" width="70px" height:="70px" class="icon">
+						<div class="pic"></div>
+						<div id="C15_Title" class="title">List Title</div>
+						<div id="C15_Description" class="summary">Preview the content here, this item can hold more words.</div>
+						<div class="sp">
+						</div>
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+				</div>
+
+				<!---------------------------------------------------------------------------------------->
+				<!--标题: 列表表单-->
+
+				<div class="nav-header">
+					<a href="#">&nbsp;
+						<img src="static/picture/btn_left.png" width="6px" height:="6px">&nbsp;&nbsp;
+						列表表单&nbsp;&nbsp;<span class="sec">List & Form</span></a>
+				</div>
+
+				<!---------------------------------------------------------------------------------------->
+				<!--容器: 列表表单-->
+
+				<div class="nav-container clearfix tipsClass7 topline">
+					<div class="tipstutorials7">拖动卡片<br/>添加元件</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--列表项-->
+
+					<img src="static/picture/l1.svg" data-ele='<div class="ele-box list-default clearfix" id="L1" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="outer-container">
+						<span id="L1_Title" class="text">List Title</span>
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--带值的列表项-->
+
+					<img src="static/picture/l2.svg" data-ele='<div class="ele-box list-value clearfix" id="L2" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="outer-container">
+						<span id="L2_Title" class="text-l">List Title</span>
+						<span id="L2_Value" class="text-r">Value</span>
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--带开关的列表项-->
+
+					<img src="static/picture/l3.svg" data-ele='<div class="ele-box list-switch clearfix" id="L3" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="outer-container">
+						<span id="L3_Title" class="text">List Title</span>
+						<img src="static/picture/switch.svg" width="51px" height:="31px" class="switch">
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--深入式列表项-->
+
+					<img src="static/picture/l4.svg" data-ele='<div class="ele-box list-hierarchical clearfix" id="L4" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="outer-container">
+						<span id="L4_Title" class="text">List Title</span>
+						<img src="static/picture/arrow.svg" width="8px" height:="13px" class="arrow">
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--带值的深入式列表项-->
+
+					<img src="static/picture/l5.svg" data-ele='<div class="ele-box list-hierarchical-value clearfix" id="L5" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="outer-container">
+						<span id="L5_Title" class="text-l">List Title</span>
+						<img src="static/picture/arrow.svg" width="8px" height:="13px" class="arrow">
+						<span id="L5_Value" class="text-r">Value</span>
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--图标列表项-->
+
+					<img src="static/picture/l6.svg" data-ele='<div class="ele-box list-icon-default clearfix" id="L6" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="outer-container">
+						<div class="Icon"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon">
+						<span id="L6_Title" class="text">List Title</span>
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--带值的图标列表项-->
+
+					<img src="static/picture/l7.svg" data-ele='<div class="ele-box list-icon-value clearfix" id="L7" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="outer-container">
+						<div class="Icon"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon"></div>
+						<span id="L7_Title" class="text-l">List Title</span>
+						<span id="L7_Value" class="text-r">Value</span>
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--深入式图标列表项-->
+
+					<img src="static/picture/l8.svg" data-ele='<div class="ele-box list-icon-hierarchical clearfix" id="L8" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="outer-container">
+						<div class="Icon"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon"></div>
+						<span id="L8_Title" class="text">List Title</span>
+						<img src="static/picture/arrow.svg" width="8px" height:="13px" class="arrow">
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--带值的深入式图标列表项-->
+
+					<img src="static/picture/l9.svg" data-ele='<div class="ele-box list-icon-hierarchical-value clearfix" id="L9" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="outer-container">
+						<div class="Icon"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon"></div>
+						<span id="L9_Title" class="text-l">List Title</span>
+						<img src="static/picture/arrow.svg" width="8px" height:="13px" class="arrow">
+						<span id="L9_Value" class="text-r">Value</span>
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--头像列表项-->
+
+					<img src="static/picture/l10.svg" data-ele='<div class="ele-box list-avatar-default clearfix" id="L10" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="outer-container">
+						<img src="static/picture/avatar.svg" width="45px" height:="45px" class="icon">
+						<span id="L10_Title" class="text">List Title</span>
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--深入式头像列表项-->
+
+					<img src="static/picture/l11.svg" data-ele='<div class="ele-box list-avatar-hierarchical clearfix" id="L11" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="outer-container">
+						<img src="static/picture/avatar.svg" width="45px" height:="45px" class="icon">
+						<span id="L11_Title" class="text">List Title</span>
+						<img src="static/picture/arrow.svg" width="8px" height:="13px" class="arrow">
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--带预览的头像列表项-->
+
+					<img src="static/picture/l12.svg" data-ele='<div class="ele-box list-avatar-summary clearfix" id="L12" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="outer-container">
+						<img src="static/picture/avatar.svg" width="45px" height:="45px" class="icon">
+						<div id="L12_Title" class="title">List Title</div>
+						<div id="L12_Description" class="summary">Preview the content here.</div>
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--带预览的深入式头像列表项-->
+
+					<img src="static/picture/l13.svg" data-ele='<div class="ele-box list-avatar-hierarchical-summary clearfix" id="L13" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="outer-container">
+						<img src="static/picture/avatar.svg" width="45px" height:="45px" class="icon">
+						<img src="static/picture/arrow.svg" width="8px" height:="13px" class="arrow">
+						<div id="L13_Title" class="title">List Title</div>
+						<div id="L13_Description" class="summary">Preview the content here.</div>
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--左缩略图列表项-->
+
+					<img src="static/picture/l14.svg" data-ele='<div class="ele-box list-thumbnail-l clearfix" id="L14" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="outer-container">
+						<img src="static/picture/thumbnail.svg" width="70px" height:="70px" class="icon">
+						<div id="L14_Title" class="title">List Title</div>
+						<div id="L14_Description" class="summary">Preview the content here, this item can hold more words.</div>
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--右缩略图列表项-->
+
+					<img src="static/picture/l15.svg" data-ele='<div class="ele-box list-thumbnail-r clearfix" id="L15" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="outer-container">
+						<img src="static/picture/thumbnail.svg" width="70px" height:="70px" class="icon">
+						<div id="L15_Title" class="title">List Title</div>
+						<div id="L15_Description" class="summary">Preview the content here, this item can hold more words.</div>
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--表单列表项-->
+
+					<img src="static/picture/l16.svg" data-ele='<div class="ele-box list-form clearfix" id="L16" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="outer-container">
+						<span id="L16_Title" class="text-l">List Title</span>
+						<span id="L16_Placeholder" class="text-r">Placeholder</span>
+						</div>
+					</div>' width="178px" height:="178px" class="block" onmouseover=style.cursor="move">
+
+				</div>
+
+				<!---------------------------------------------------------------------------------------->
+
+
+
+			</div>
+
+			<!---------------------------------------------------------------------------------------->
+			<!--设置侧栏-->
+
+			<div class="set-sidebar">
+
+				<!---------------------------------------------------------------------------------------->
+				<!--更多操作-->
+
+				<div class="set-headfeild">
+					<div class="test">&nbsp;
+						<img src="static/picture/btn_left.png" width="6px" height:="6px">&nbsp;&nbsp; 设置&nbsp;&nbsp;<span class="th">Setting & Override</span>
+					</div>
+				</div>
+
+				<!---------------------------------------------------------------------------------------->
+
+				<div class="set-boxfeild">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--设置-全局设置-->
+
+					<div class="set-all-box clearfix" id="HHH">
+						<div class="set-header">
+							全局设置
+						</div>
+						<label>隐藏状态栏&nbsp;&nbsp;Status Bar </label>
+						<span class="switch">
+							<input type="checkbox" id="inset">
+							<label for="inset" class="green" onmouseover=style.cursor="pointer"></label>
+						</span>
+						<label>隐藏外壳&nbsp;&nbsp;Mockup </label>
+						<span class="switch">
+							<input type="checkbox" id="inset2">
+							<label for="inset2" class="green" onmouseover=style.cursor="pointer"></label>
+						</span>
+					</div>
+
+					<div class="">
+
+						<div class="set-box set-first clearfix">
+							<div class="set-header">
+								信息重写
+							</div>
+							<p>
+								#&nbsp;&nbsp;点击中间区域的元件以选中元件<br/> #&nbsp;&nbsp;选中后可在此卡片更改元件中的信息
+							</p>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-默认导航栏-->
+
+						<div class="set-box clearfix" id="N1S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Title: </label>
+							<input id="N1_Title_I" name="T"><br>
+							<label>Action 1: </label>
+							<input id="N1_Action1_I" name="T"><br>
+							<label>Icon 1: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Action 2: </label>
+							<input id="N1_Action2_I" name="T"><br>
+							<label>Icon 2: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Icon 3: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-模态页面导航栏-->
+
+						<div class="set-box clearfix" id="N2S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Title: </label>
+							<input id="N2_Title_I" name="T"><br>
+							<label>Cancel: </label>
+							<input id="N2_Cancel_I" name="T"><br>
+							<label>Done: </label>
+							<input id="N2_Done_I" name="T"><br>
+							<label>Icon: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-子页面导航栏-->
+
+						<div class="set-box clearfix" id="N3S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Title: </label>
+							<input id="N3_Title_I" name="T"><br>
+							<label>Back: </label>
+							<input id="N3_Back_I" name="T"><br>
+							<label>Action: </label>
+							<input id="N3_Action_I" name="T"><br>
+							<label>Icon 1: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Icon 2: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-大标题导航栏-->
+
+						<div class="set-box clearfix" id="N4S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Heading: </label>
+							<input id="N4_Heading_I" name="T"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-带操作的大标题导航栏-->
+
+						<div class="set-box clearfix" id="N5S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Heading: </label>
+							<input id="N5_Heading_I" name="T"><br>
+							<label>Action 1: </label>
+							<input id="N5_Action1_I" name="T"><br>
+							<label>Icon 1: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Action 2: </label>
+							<input id="N5_Action2_I" name="T"><br>
+							<label>Icon 2: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-子页面大标题导航栏-->
+
+						<div class="set-box clearfix" id="N6S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Heading: </label>
+							<input id="N6_Heading_I" name="T"><br>
+							<label>Back: </label>
+							<input id="N6_Back_I" name="T"><br>
+							<label>Action: </label>
+							<input id="N6_Action_I" name="T"><br>
+							<label>Icon: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-搜索框导航栏-->
+
+						<div class="set-box clearfix" id="N7S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Search: </label>
+							<input id="N7_Search_I" name="T"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-带操作的搜索框导航栏-->
+
+						<div class="set-box clearfix" id="N8S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Search: </label>
+							<input id="N8_Search_I" name="T"><br>
+							<label>Action: </label>
+							<input id="N8_Action_I" name="T"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-2x 分段控件范围栏-->
+
+						<div class="set-box clearfix" id="S1S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Label 1: </label>
+							<input id="S1_Label1_I" name="T"><br>
+							<label>Label 2: </label>
+							<input id="S1_Label2_I" name="T"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-3x 分段控件范围栏-->
+
+						<div class="set-box clearfix" id="S2S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Label 1: </label>
+							<input id="S2_Label1_I" name="T"><br>
+							<label>Label 2: </label>
+							<input id="S2_Label2_I" name="T"><br>
+							<label>Label 3: </label>
+							<input id="S2_Label3_I" name="T"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-4x 分段控件范围栏-->
+
+						<div class="set-box clearfix" id="S3S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Label 1: </label>
+							<input id="S3_Label1_I" name="T"><br>
+							<label>Label 2: </label>
+							<input id="S3_Label2_I" name="T"><br>
+							<label>Label 3: </label>
+							<input id="S3_Label3_I" name="T"><br>
+							<label>Label 4: </label>
+							<input id="S3_Label4_I" name="T"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-搜索框范围栏-->
+
+						<div class="set-box clearfix" id="S4S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Search: </label>
+							<input id="S4_Search_I" name="T"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-2x 顶部标签范围栏-->
+
+						<div class="set-box clearfix" id="S5S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Label 1: </label>
+							<input id="S5_Label1_I" name="T"><br>
+							<label>Label 2: </label>
+							<input id="S5_Label2_I" name="T"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-3x 顶部标签范围栏-->
+
+						<div class="set-box clearfix" id="S6S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Label 1: </label>
+							<input id="S6_Label1_I" name="T"><br>
+							<label>Label 2: </label>
+							<input id="S6_Label2_I" name="T"><br>
+							<label>Label 3: </label>
+							<input id="S6_Label3_I" name="T"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-4x 顶部标签范围栏-->
+
+						<div class="set-box clearfix" id="S7S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Label 1: </label>
+							<input id="S7_Label1_I" name="T"><br>
+							<label>Label 2: </label>
+							<input id="S7_Label2_I" name="T"><br>
+							<label>Label 3: </label>
+							<input id="S7_Label3_I" name="T"><br>
+							<label>Label 4: </label>
+							<input id="S7_Label4_I" name="T"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-顶部滚动标签范围栏-->
+
+						<div class="set-box clearfix" id="S8S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Label 1: </label>
+							<input id="S8_Label1_I" name="T"><br>
+							<label>Label 2: </label>
+							<input id="S8_Label2_I" name="T"><br>
+							<label>Label 3: </label>
+							<input id="S8_Label3_I" name="T"><br>
+							<label>Label 4: </label>
+							<input id="S8_Label4_I" name="T"><br>
+							<label>Label 5: </label>
+							<input id="S8_Label5_I" name="T"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-筛选菜单范围栏-->
+
+						<div class="set-box clearfix" id="S9S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Label: </label>
+							<input id="S9_Label_I" name="T"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-大标题-->
+
+						<div class="set-box clearfix" id="G1S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Heading: </label>
+							<input id="G1_Heading_I"><br>
+							<label>More: </label>
+							<input id="G1_More_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-中标题-->
+
+						<div class="set-box clearfix" id="G2S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Heading: </label>
+							<input id="G2_Heading_I"><br>
+							<label>More: </label>
+							<input id="G2_More_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-小标题-->
+
+						<div class="set-box clearfix" id="G3S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Heading: </label>
+							<input id="G3_Heading_I"><br>
+							<label>More: </label>
+							<input id="G3_More_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-文段-->
+
+						<div class="set-box clearfix" id="G4S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Description: </label>
+							<input id="G4_Description_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-分隔线-->
+
+						<div class="set-box clearfix" id="G5S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-大间距-->
+
+						<div class="set-box clearfix" id="G6S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-小间距-->
+
+						<div class="set-box clearfix" id="G7S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-图片-->
+
+						<div class="set-box clearfix" id="G8S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-播放器-->
+
+						<div class="set-box clearfix" id="G9S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-地图-->
+
+						<div class="set-box clearfix" id="G10S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-左对齐按钮-->
+
+						<div class="set-box clearfix" id="G11S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Button: </label>
+							<input id="G11_Button_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-居中对齐按钮-->
+
+						<div class="set-box clearfix" id="G12S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Button: </label>
+							<input id="G12_Button_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-右对齐按钮-->
+
+						<div class="set-box clearfix" id="G13S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Button: </label>
+							<input id="G13_Button_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-整行按钮-->
+
+						<div class="set-box clearfix" id="G14S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Button: </label>
+							<input id="G14_Button_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-按钮组-->
+
+						<div class="set-box clearfix" id="G15S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Button 1: </label>
+							<input id="G15_Button1_I"><br>
+							<label>Button 2: </label>
+							<input id="G15_Button2_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-注释专用占位符-->
+
+						<div class="set-box clearfix" id="G16S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Annotation: </label>
+							<input id="G16_Annotation_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-3x 图标组-->
+
+						<div class="set-box clearfix" id="CN1S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Icon 1: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Icon 2: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Icon 3: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-4x 图标组-->
+
+						<div class="set-box clearfix" id="CN2S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Icon 1: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Icon 2: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Icon 3: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Icon 4: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-5x 图标组-->
+
+						<div class="set-box clearfix" id="CN3S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Icon 1: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Icon 2: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Icon 3: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Icon 4: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Icon 5: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-4x 宫格-->
+
+						<div class="set-box clearfix" id="CN4S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Icon 1: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 1: </label>
+							<input id="CN4_Label1_I"><br>
+							<label>Icon 2: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 2: </label>
+							<input id="CN4_Label2_I"><br>
+							<label>Icon 3: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 3: </label>
+							<input id="CN4_Label3_I"><br>
+							<label>Icon 4: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 4: </label>
+							<input id="CN4_Label4_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-5x 宫格-->
+
+						<div class="set-box clearfix" id="CN5S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Icon 1: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 1: </label>
+							<input id="CN5_Label1_I"><br>
+							<label>Icon 2: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 2: </label>
+							<input id="CN5_Label2_I"><br>
+							<label>Icon 3: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 3: </label>
+							<input id="CN5_Label3_I"><br>
+							<label>Icon 4: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 4: </label>
+							<input id="CN5_Label4_I"><br>
+							<label>Icon 5: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 5: </label>
+							<input id="CN5_Label5_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-3x 页内标签导航-->
+
+						<div class="set-box clearfix" id="CN6S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Label 1: </label>
+							<input id="CN6_Label1_I"><br>
+							<label>Label 2: </label>
+							<input id="CN6_Label2_I"><br>
+							<label>Label 3: </label>
+							<input id="CN6_Label3_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-4x 页内标签导航-->
+
+						<div class="set-box clearfix" id="CN7S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Label 1: </label>
+							<input id="CN7_Label1_I"><br>
+							<label>Label 2: </label>
+							<input id="CN7_Label2_I"><br>
+							<label>Label 3: </label>
+							<input id="CN7_Label3_I"><br>
+							<label>Label 4: </label>
+							<input id="CN7_Label4_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-5x 页内标签导航-->
+
+						<div class="set-box clearfix" id="CN8S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Label 1: </label>
+							<input id="CN8_Label1_I"><br>
+							<label>Label 2: </label>
+							<input id="CN8_Label2_I"><br>
+							<label>Label 3: </label>
+							<input id="CN8_Label3_I"><br>
+							<label>Label 4: </label>
+							<input id="CN8_Label4_I"><br>
+							<label>Label 5: </label>
+							<input id="CN8_Label5_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-横幅-->
+
+						<div class="set-box clearfix" id="C1S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Description: </label>
+							<input id="C1_Description_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-轮播图-->
+
+						<div class="set-box clearfix" id="C2S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Description: </label>
+							<input id="C2_Description_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-页面指示器-->
+
+						<div class="set-box clearfix" id="C3S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-条状页面指示器-->
+
+						<div class="set-box clearfix" id="C4S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-2x 专辑-->
+
+						<div class="set-box clearfix" id="C5S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title 1: </label>
+							<input id="C5_Title1_I"><br>
+							<label>Title 2: </label>
+							<input id="C5_Title2_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-3x 专辑-->
+
+						<div class="set-box clearfix" id="C6S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title 1: </label>
+							<input id="C6_Title1_I"><br>
+							<label>Title 2: </label>
+							<input id="C6_Title2_I"><br>
+							<label>Title 3: </label>
+							<input id="C6_Title3_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-大尺寸水平滚动专辑-->
+
+						<div class="set-box clearfix" id="C7S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title: </label>
+							<input id="C7_Title_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-中尺寸水平滚动专辑-->
+
+						<div class="set-box clearfix" id="C8S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title 1: </label>
+							<input id="C8_Title1_I"><br>
+							<label>Title 2: </label>
+							<input id="C8_Title2_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-小尺寸水平滚动专辑-->
+
+						<div class="set-box clearfix" id="C9S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title 1: </label>
+							<input id="C9_Title1_I"><br>
+							<label>Title 2: </label>
+							<input id="C9_Title2_I"><br>
+							<label>Title 3: </label>
+							<input id="C9_Title3_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-2x 卡片辑-->
+
+						<div class="set-box clearfix" id="C10S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title 1: </label>
+							<input id="C10_Title1_I"><br>
+							<label>Desc 1: </label>
+							<input id="C10_Desc1_I"><br>
+							<label>Title 2: </label>
+							<input id="C10_Title2_I"><br>
+							<label>Desc 2: </label>
+							<input id="C10_Desc2_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-3x 卡片辑-->
+
+						<div class="set-box clearfix" id="C11S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title 1: </label>
+							<input id="C11_Title1_I"><br>
+							<label>Desc 1: </label>
+							<input id="C11_Desc1_I"><br>
+							<label>Title 2: </label>
+							<input id="C11_Title2_I"><br>
+							<label>Desc 2: </label>
+							<input id="C11_Desc2_I"><br>
+							<label>Title 3: </label>
+							<input id="C11_Title3_I"><br>
+							<label>Desc 3: </label>
+							<input id="C11_Desc3_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-大尺寸水平滚动卡片辑-->
+
+						<div class="set-box clearfix" id="C12S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title: </label>
+							<input id="C12_Title_I"><br>
+							<label>Description: </label>
+							<input id="C12_Description_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-中尺寸水平滚动卡片辑-->
+
+						<div class="set-box clearfix" id="C13S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title 1: </label>
+							<input id="C13_Title1_I"><br>
+							<label>Desc 1: </label>
+							<input id="C13_Desc1_I"><br>
+							<label>Title 2: </label>
+							<input id="C13_Title2_I"><br>
+							<label>Desc 2: </label>
+							<input id="C13_Desc2_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-小尺寸水平滚动卡片辑-->
+
+						<div class="set-box clearfix" id="C14S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title 1: </label>
+							<input id="C14_Title1_I"><br>
+							<label>Desc 1: </label>
+							<input id="C14_Desc1_I"><br>
+							<label>Title 2: </label>
+							<input id="C14_Title2_I"><br>
+							<label>Desc 2: </label>
+							<input id="C14_Desc2_I"><br>
+							<label>Title 3: </label>
+							<input id="C14_Title3_I"><br>
+							<label>Desc 3: </label>
+							<input id="C14_Desc3_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-水平滚动缩略图列表-->
+
+						<div class="set-box clearfix" id="C15S">
+							<div class="set-header">
+								信息重写
+								<button type="button" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title: </label>
+							<input id="C15_Title_I"><br>
+							<label>Description: </label>
+							<input id="C15_Description_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-列表项-->
+
+						<div class="set-box clearfix" id="L1S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title: </label>
+							<input id="L1_Title_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-带值的列表项-->
+
+						<div class="set-box clearfix" id="L2S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title: </label>
+							<input id="L2_Title_I"><br>
+							<label>Value: </label>
+							<input id="L2_Value_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-带开关的列表项-->
+
+						<div class="set-box clearfix" id="L3S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title: </label>
+							<input id="L3_Title_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-深入式列表项-->
+
+						<div class="set-box clearfix" id="L4S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title: </label>
+							<input id="L4_Title_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-带值的深入式列表项-->
+
+						<div class="set-box clearfix" id="L5S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title: </label>
+							<input id="L5_Title_I"><br>
+							<label>Value: </label>
+							<input id="L5_Value_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-图标列表项-->
+
+						<div class="set-box clearfix" id="L6S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Icon: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Title: </label>
+							<input id="L6_Title_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-带值的图标列表项-->
+
+						<div class="set-box clearfix" id="L7S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Icon: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Title: </label>
+							<input id="L7_Title_I"><br>
+							<label>Value: </label>
+							<input id="L7_Value_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-深入式图标列表项-->
+
+						<div class="set-box clearfix" id="L8S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Icon: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Title: </label>
+							<input id="L8_Title_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-带值的深入式图标列表项-->
+
+						<div class="set-box clearfix" id="L9S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Icon: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Title: </label>
+							<input id="L9_Title_I"><br>
+							<label>Value: </label>
+							<input id="L9_Value_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-头像列表项-->
+
+						<div class="set-box clearfix" id="L10S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title: </label>
+							<input id="L10_Title_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-深入式头像列表项-->
+
+						<div class="set-box clearfix" id="L11S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title: </label>
+							<input id="L11_Title_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-带预览的头像列表项-->
+
+						<div class="set-box clearfix" id="L12S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title: </label>
+							<input id="L12_Title_I"><br>
+							<label>Description: </label>
+							<input id="L12_Description_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-带预览的深入式头像列表项-->
+
+						<div class="set-box clearfix" id="L13S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title: </label>
+							<input id="L13_Title_I"><br>
+							<label>Description: </label>
+							<input id="L13_Description_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-左缩略图列表项-->
+
+						<div class="set-box clearfix" id="L14S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title: </label>
+							<input id="L14_Title_I" type="text" name="T" value="List Title"><br>
+							<label>Description: </label>
+							<input id="L14_Description_I" type="text" name="D" value="Preview the content here,this item can hold more words."><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-右缩略图列表项-->
+
+						<div class="set-box clearfix" id="L15S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title: </label>
+							<input id="L15_Title_I"><br>
+							<label>Description: </label>
+							<input id="L15_Description_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-表单列表项-->
+
+						<div class="set-box clearfix" id="L16S">
+							<div class="set-header">
+								信息重写
+								<button type="button" class="delete" onmouseover=style.cursor="pointer">移除控件</button>
+							</div>
+							<label>Title: </label>
+							<input id="L16_Title_I"><br>
+							<label>Placeholder: </label>
+							<input id="L16_Placeholder_I"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-3x 标签导航-->
+
+						<div class="set-box clearfix" id="B1S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Icon 1: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 1: </label>
+							<input id="B1_Label1_I" name="T"><br>
+							<label>Icon 2: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 2: </label>
+							<input id="B1_Label2_I" name="T"><br>
+							<label>Icon 3: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 3: </label>
+							<input id="B1_Label3_I" name="T"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-4x 标签导航-->
+
+						<div class="set-box clearfix" id="B2S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Icon 1: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 1: </label>
+							<input id="B2_Label1_I" name="T"><br>
+							<label>Icon 2: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 2: </label>
+							<input id="B2_Label2_I" name="T"><br>
+							<label>Icon 3: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 3: </label>
+							<input id="B2_Label3_I" name="T"><br>
+							<label>Icon 4: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 4: </label>
+							<input id="B2_Label4_I" name="T"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-5x 标签导航-->
+
+						<div class="set-box clearfix" id="B3S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Icon 1: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 1: </label>
+							<input id="B3_Label1_I" name="T"><br>
+							<label>Icon 2: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 2: </label>
+							<input id="B3_Label2_I" name="T"><br>
+							<label>Icon 3: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 3: </label>
+							<input id="B3_Label3_I" name="T"><br>
+							<label>Icon 4: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 4: </label>
+							<input id="B3_Label4_I" name="T"><br>
+							<label>Icon 5: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 5: </label>
+							<input id="B3_Label5_I" name="T"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-舵式导航-->
+
+						<div class="set-box clearfix" id="B4S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Icon 1: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 1: </label>
+							<input id="B4_Label1_I" name="T"><br>
+							<label>Icon 2: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 2: </label>
+							<input id="B4_Label2_I" name="T"><br>
+							<label>Icon R: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Icon 3: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 3: </label>
+							<input id="B4_Label3_I" name="T"><br>
+							<label>Icon 4: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Label 4: </label>
+							<input id="B4_Label4_I" name="T"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-3x 工具栏-->
+
+						<div class="set-box clearfix" id="B5S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Icon 1: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Icon 2: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Icon 3: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-4x 工具栏-->
+
+						<div class="set-box clearfix" id="B6S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Icon 1: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Icon 2: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Icon 3: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Icon 4: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-5x 工具栏-->
+
+						<div class="set-box clearfix" id="B7S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Icon 1: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Icon 2: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Icon 3: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Icon 4: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Icon 5: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-带概要的工具栏-->
+
+						<div class="set-box clearfix" id="B8S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Icon 1: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+							<label>Summary: </label>
+							<input id="B8_Summary_I" name="T"><br>
+							<label>Icon 2: </label>
+							<select>
+								<option>--请选择--</option>
+							    <option>no-icon</option><option>bookmark</option>
+									<option>briefcase</option><option>calendar</option>
+							    <option>camera</option><option>clock</option>
+									<option>download</option><option>edit</option>
+							    <option>filter</option><option>folder</option>
+									<option>heart</option><option>home</option>
+							    <option>image</option><option>mail</option>
+									<option>menu</option>
+							    <option>message</option><option>more</option>
+									<option>phone</option><option>pin</option>
+							    <option>play</option><option>plus</option>
+									<option>save</option><option>search</option>
+							    <option>settings</option><option>share</option>
+									<option>share-2</option><option>shopping</option>
+							    <option>star</option>
+									<option>user</option><option>users</option>
+									<option>user-plus</option>
+							</select><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-带概要的文字工具栏-->
+
+						<div class="set-box clearfix" id="B9S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Action 1: </label>
+							<input id="B9_Action1_I" name="T"><br>
+							<label>Summary: </label>
+							<input id="B9_Summary_I" name="T"><br>
+							<label>Action 2: </label>
+							<input id="B9_Action2_I" name="T"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+						<!--设置-文字工具栏-->
+
+						<div class="set-box clearfix" id="B10S">
+							<div class="set-header">
+								信息重写
+							</div>
+							<label>Action 1: </label>
+							<input id="B10_Action1_I" name="T"><br>
+							<label>Action 2: </label>
+							<input id="B10_Action2_I" name="T"><br>
+							<label>Action 3: </label>
+							<input id="B10_Action3_I" name="T"><br>
+						</div>
+
+						<!---------------------------------------------------------------------------------------->
+
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--设置-保存截图至本地-->
+
+					<div class="set-button clearfix" onmouseover=style.cursor="pointer">
+						<span class="set-button-text" id="btn">保存截图至本地</span>
+					</div>
+
+					<div class="testimg" onmouseover=style.cursor="pointer">
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+
+				</div>
+
+				<!---------------------------------------------------------------------------------------->
+
+			</div>
+
+			<!---------------------------------------------------------------------------------------->
+			<!--外壳-->
+
+			<div class="mockup">
+				<img src="static/picture/mockup-flat.png" alt="mockup" width="424px" height="873px" />
+				<div class="tips tipstutorials8">点击以选中控件<br/>长按以排序控件</div>
+			</div>
+
+			<!---------------------------------------------------------------------------------------->
+			<!--主界面-->
+
+			<div class="placeholder"></div>
+			<div class="interface" id="interface">
+
+				<!---------------------------------------------------------------------------------------->
+				<!--导航放置区域-->
+
+				<div class="status-field">
+					<img src="static/picture/status bar.svg" width="375px" height:="20px">
+				</div>
+
+				<!---------------------------------------------------------------------------------------->
+				<!--导航栏放置区域-->
+
+				<div class="navigation-field clearfix">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--默认导航栏-->
+
+					<div class="nav-box nav-default clearfix" id="N1" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<span id="N1_Action1" class="text-l">Action</span>
+						<div class="Icon1"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon-l" /></div>
+						<span id="N1_Title" class="text-c">Title</span>
+						<div class="Icon2"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon-r" /></div>
+						<div class="Icon3"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon-r" /></div>
+						<span id="N1_Action2" class="text-r">Action</span>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--模态页面导航栏-->
+
+					<div class="nav-box nav-modal clearfix" id="N2" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<span id="N2_Cancel" class="text-l">Cancel</span>
+						<span id="N2_Title" class="text-c">Title</span>
+						<div class="Icon"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon-r" /></div>
+						<span id="N2_Done" class="text-r">Done</span>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--子页面导航栏-->
+
+					<div class="nav-box nav-hierarchical clearfix" id="N3" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<img src="static/picture/back.svg" width="13px" height:="21px" class="icon-l" />
+						<span id="N3_Back" class="text-l">Back</span>
+						<span id="N3_Title" class="text-c">Title</span>
+						<div class="Icon1"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon-r" /></div>
+						<div class="Icon2"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon-r" /></div>
+						<span id="N3_Action" class="text-r">Action</span>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--大标题导航栏-->
+
+					<div class="nav-box nav-heading clearfix" id="N4" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="navigation"></div>
+						<div id="N4_Heading" class="heading">Heading</div>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--带操作的大标题导航栏-->
+
+					<div class="nav-box nav-heading-action clearfix demo" id="N5" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="navigation">
+							<span id="N5_Action1" class="text-l">Action</span>
+							<div class="Icon1"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon-l" /></div>
+							<div class="Icon2"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon-r" /></div>
+							<span id="N5_Action2" class="text-r">Action</span>
+						</div>
+						<div id="N5_Heading" class="heading">Heading</div>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--子页面大标题导航栏-->
+
+					<div class="nav-box nav-heading-hierarchical clearfix" id="N6" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="navigation">
+							<img src="static/picture/back.svg" width="13px" height:="21px" class="icon-l" />
+							<span id="N6_Back" class="text-l">Back</span>
+							<div class="Icon"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon-r" /></div>
+							<span id="N6_Action" class="text-r">Action</span>
+						</div>
+						<div id="N6_Heading" class="heading">Heading</div>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--搜索框导航栏-->
+
+					<div class="nav-box nav-searchbar clearfix" id="N7" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="search-field clearfix">
+							<img src="static/picture/search.svg" width="11px" height:="11px">
+							<span id="N7_Search" class="text">Search</span>
+						</div>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--带操作的搜索框导航栏-->
+
+					<div class="nav-box nav-searchbar-action clearfix" id="N8" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="search-field clearfix">
+							<img src="static/picture/search.svg" width="11px" height:="11px">
+							<span id="N8_Search" class="text">Search</span>
+							<span id="N8_Action" class="text-r">Action</span>
+						</div>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+
+				</div>
+
+				<!---------------------------------------------------------------------------------------->
+				<!--范围栏放置区域-->
+
+				<div class="scope-field clearfix">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--2x 分段控件范围栏-->
+
+					<div class="scp-box scope-segmented-2 clearfix demo" id="S1" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div id="S1_Label1" class="segmented-first label">Label</div>
+						<div id="S1_Label2" class="segmented">Label</div>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--3x 分段控件范围栏-->
+
+					<div class="scp-box scope-segmented-3 clearfix" id="S2" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div id="S2_Label1" class="seg-1">Label</div>
+						<div id="S2_Label2" class="seg-2">Label</div>
+						<div id="S2_Label3" class="seg-3">Label</div>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--4x 分段控件范围栏-->
+
+					<div class="scp-box scope-segmented-4 clearfix" id="S3" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div id="S3_Label1" class="seg-1">label</div>
+						<div id="S3_Label2" class="seg-2">label</div>
+						<div id="S3_Label3" class="seg-3">label</div>
+						<div id="S3_Label4" class="seg-4">label</div>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--搜索框范围栏-->
+
+					<div class="scp-box scope-searchbar clearfix" id="S4" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="search-field">
+							<img src="static/picture/search.svg" width="11px" height:="11px">
+							<span id="S4_Search" class="text-title">Search</span>
+						</div>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--2x 顶部标签范围栏-->
+
+					<div class="scp-box scope-scrolltabs-2 clearfix" id="S5" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<span id="S5_Label1" class="label-a">Label</span>
+						<span id="S5_Label2" class="label">Label</span>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--3x 顶部标签范围栏-->
+
+					<div class="scp-box scope-scrolltabs-3 clearfix" id="S6" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<span id="S6_Label1" class="label-a">Label</span>
+						<span id="S6_Label2" class="label">Label</span>
+						<span id="S6_Label3" class="label">Label</span>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--4x 顶部标签范围栏-->
+
+					<div class="scp-box scope-scrolltabs-4 clearfix" id="S7" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<span id="S7_Label1" class="label-a">Label</span>
+						<span id="S7_Label2" class="label">Label</span>
+						<span id="S7_Label3" class="label">Label</span>
+						<span id="S7_Label4" class="label">Label</span>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--顶部滚动标签范围栏-->
+
+					<div class="scp-box scope-scrolltabs-combo clearfix" id="S8" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<span id="S8_Label1" class="label-a">Label</span>
+						<span id="S8_Label2" class="label">Label</span>
+						<span id="S8_Label3" class="label">Label</span>
+						<span id="S8_Label4" class="label">Label</span>
+						<span id="S8_Label5" class="label">Label</span>
+						<span class="label-l">lab</span>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--筛选菜单范围栏-->
+
+					<div class="scp-box scope-menu clearfix" id="S9" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<span class="icon"><img src="static/picture/down.svg" width="8px" height:="7px"></span>
+						<span id="S9_Label" class="label">Label</span>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+
+				</div>
+
+				<!---------------------------------------------------------------------------------------->
+				<!--元素放置区域-->
+
+				<div class="element-field clearfix">
+					<div class="leading">
+						<img src="static/picture/atom.svg" width="130px" height:="130px">
+					</div>
+				</div>
+
+				<!---------------------------------------------------------------------------------------->
+				<!--底栏放置区域-->
+
+				<div class="bar-field clearfix">
+
+					<!---------------------------------------------------------------------------------------->
+					<!--3x 标签导航-->
+
+					<div class="bar-box bar-tab-3 clearfix" id="B1" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="Icon1"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+						<div class="Icon2"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+						<div class="Icon3"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+						<span id="B1_Label1" class="label">Label</span>
+						<span id="B1_Label2" class="label">Label</span>
+						<span id="B1_Label3" class="label">Label</span>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--4x 标签导航-->
+
+					<div class="bar-box bar-tab-4 clearfix demo" id="B2" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="Icon1"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+						<div class="Icon2"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+						<div class="Icon3"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+						<div class="Icon4"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+						<span id="B2_Label1" class="label">Label</span>
+						<span id="B2_Label2" class="label">Label</span>
+						<span id="B2_Label3" class="label">Label</span>
+						<span id="B2_Label4" class="label">Label</span>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--5x 标签导航-->
+
+					<div class="bar-box bar-tab-5 clearfix" id="B3" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="Icon1"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+						<div class="Icon2"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+						<div class="Icon3"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+						<div class="Icon4"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+						<div class="Icon5"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+						<span id="B3_Label1" class="label">Label</span>
+						<span id="B3_Label2" class="label">Label</span>
+						<span id="B3_Label3" class="label">Label</span>
+						<span id="B3_Label4" class="label">Label</span>
+						<span id="B3_Label5" class="label">Label</span>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--舵式导航-->
+
+					<div class="bar-box bar-tab-rudder clearfix" id="B4" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="IconR"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon-c" /></div>
+						<div class="clearfix">
+							<div class="Icon1"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon-l" /></div>
+							<div class="Icon2"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon-l" /></div>
+							<div class="Icon4"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon-r" /></div>
+							<div class="Icon3"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon-r" /></div>
+						</div>
+						<div class="clearfix">
+							<span id="B4_Label1" class="label-l">Label</span>
+							<span id="B4_Label2" class="label-l">Label</span>
+							<span id="B4_Label4" class="label-r">Label</span>
+							<span id="B4_Label3" class="label-r">Label</span>
+						</div>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--3x 工具栏-->
+
+					<div class="bar-box bar-tool-3 clearfix" id="B5" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="toolbar-icon-field clearfix">
+							<div class="Icon1"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+							<div class="Icon2"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+							<div class="Icon3"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="final-icon" /></div>
+						</div>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--4x 工具栏-->
+
+					<div class="bar-box bar-tool-4 clearfix" id="B6" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="toolbar-icon-field clearfix">
+							<div class="Icon1"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+							<div class="Icon2"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+							<div class="Icon3"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+							<div class="Icon4"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="final-icon" /></div>
+						</div>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--5x 工具栏-->
+
+					<div class="bar-box bar-tool-5 clearfix" id="B7" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="toolbar-icon-field clearfix">
+							<div class="Icon1"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+							<div class="Icon2"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+							<div class="Icon3"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+							<div class="Icon4"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon" /></div>
+							<div class="Icon5"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="final-icon" /></div>
+						</div>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--带概要的工具栏-->
+
+					<div class="bar-box bar-tool-summary clearfix" id="B8" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="toolbar-icon-field clearfix">
+							<div class="Icon1"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon-left" /></div>
+							<span id="B8_Summary" class="text-summary">Summary</span>
+							<div class="Icon2"><img src="static/picture/icon-normal.svg" width="29px" height:="29px" class="icon-right" /></div>
+						</div>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--带概要的文字工具栏-->
+
+					<div class="bar-box bar-tool-sa clearfix" id="B9" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="toolbar-icon-field clearfix">
+							<span id="B9_Action1" class="text-left">Action</span>
+							<span id="B9_Summary" class="text-summary">Summary</span>
+							<span id="B9_Action2" class="text-right">Action</span>
+						</div>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+					<!--文字工具栏-->
+
+					<div class="bar-box bar-tool-action clearfix" id="B10" onmouseover=style.cursor="pointer">
+						<div class="mask"></div>
+						<div class="toolbar-icon-field clearfix">
+							<span id="B10_Action1" class="text-left">Action</span>
+							<span id="B10_Action2" class="text-summary">Action</span>
+							<span id="B10_Action3" class="text-right">Action</span>
+						</div>
+					</div>
+
+					<!---------------------------------------------------------------------------------------->
+
+				</div>
+
+				<!---------------------------------------------------------------------------------------->
+
+			</div>
+
+			<!---------------------------------------------------------------------------------------->
+
+		</div>
+
+		<!---------------------------------------------------------------------------------------->
+		<!--页脚-->
+
+		<div class="footer clearfix"></div>
+
+		<!---------------------------------------------------------------------------------------->
+
+		<div class="bookmark"><img src="static/picture/bookmark.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="briefcase"><img src="static/picture/briefcase.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="calendar"><img src="static/picture/calendar.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="camera"><img src="static/picture/camera.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="clock"><img src="static/picture/clock.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="download"><img src="static/picture/download.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="edit"><img src="static/picture/edit.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="filter"><img src="static/picture/filter.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="folder"><img src="static/picture/folder.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="heart"><img src="static/picture/heart.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="home"><img src="static/picture/home.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="image"><img src="static/picture/image.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="mail"><img src="static/picture/mail.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="menu"><img src="static/picture/menu.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="message"><img src="static/picture/message.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="more"><img src="static/picture/more.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="phone"><img src="static/picture/phone.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="pin"><img src="static/picture/pin.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="play"><img src="static/picture/play.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="plus"><img src="static/picture/plus.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="save"><img src="static/picture/save.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="search"><img src="static/picture/search.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="settings"><img src="static/picture/settings.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="share"><img src="static/picture/share.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="share-2"><img src="static/picture/share-2.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="shopping"><img src="static/picture/shopping.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="star"><img src="static/picture/star.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="user"><img src="static/picture/user.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="users"><img src="static/picture/users.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+		<div class="user-plus"><img src="static/picture/user-plus.svg" width="29px" height:="29px" class="ui-draggable ui-draggable-handle"></div>
+
+	</div>
+
+	<!---------------------------------------------------------------------------------------->
+
+	<script>
+		$(document).ready(function() {
+
+			
+
+			var system = {};
+			var p = navigator.platform;
+			var u = navigator.userAgent;
+
+			system.win = p.indexOf("Win") == 0;
+			system.mac = p.indexOf("Mac") == 0;
+			system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+			if (system.win || system.mac || system.xll) { //如果是PC转
+			} else {
+				window.location.href = "Expires.aspx?error=1";
+			}
+
+
+
+			//-----------------------------------------------------------------------------------------------
+			//判断若为chrome则缩放至75%
+			document.body.style.zoom = '75%';
+
+			$(".loading").fadeOut();
+
+			//-----------------------------------------------------------------------------------------------
+			//禁止滚动条
+			$(document.body).css({
+				"overflow-x": "hidden",
+				"overflow-y": "hidden"
+			});
+
+			//-----------------------------------------------------------------------------------------------
+			//禁用菜单及选中文本
+			document.oncontextmenu = function() {
+				return false;
+			};
+			document.onselectstart = function() {
+				return false;
+			};
+
+			//-----------------------------------------------------------------------------------------------
+			//重复执行
+			setInterval(function() {
+				//动态设置element-field的高度
+				$(".element-field").height(
+					$(".interface").height() - $(".status-field").height() - $(".navigation-field").height() - $(".scope-field").height() - $(".bar-field").height()
+				);
+			}, 2);
+
+			setInterval(function() {
+				//动态设置set-sidebar的高度
+				$(".set-boxfeild").height(
+					$(".set-sidebar").height() - $(".set-headfeild").height()
+				);
+			}, 2);
+
+			//-----------------------------------------------------------------------------------------------
+			//初始化
+			//将所有 nav-box 关闭
+			//$('.sta-box').hide();
+			$('.placeholder').hide();
+			$('.nav-box').hide();
+			$('.scp-box').hide();
+			$('.bar-box').hide();
+			$(".set-box").hide();
+			//$('.ele-box').hide();
+			$('.hide').hide();
+			//默认为 navigation-default 类添加 active 类, 并显示
+			$('.nav-card:first').addClass('active');
+			$('.demo').show();
+			$('.set-first').show();
+
+
+			//初始化
+			//将所有 nav-container 关闭
+			$('.nav-container').hide();
+			//默认为第一个 nav-header 添加 active 类, 展开相应的 nav-container
+			$('.nav-header:first').addClass('active').next().show();
+			//点击 nav-header
+			$('.nav-header').click(function() {
+				//如果所点击的 nav-header 的 nav-container 处于关闭状态，则执行
+				if ($(this).next().is(':hidden')) {
+					//移除所有 nav-header 的 active 类，收起相应的 nav-container
+					$('.nav-header').removeClass('active').next().slideUp(470);
+					$('.nav-sidebar').animate({
+						scrollTop: 0
+					}, 470);
+					//为所点击 nav-header 添加 active 类，展开相应的 nav-container
+					$(this).toggleClass('active').next().hide(2).slideDown(460);
+				}
+				return false;
+			});
+
+			//-----------------------------------------------------------------------------------------------
+			//导航栏图片切换
+			$('#N5P').addClass('active');
+			$('.Nblock').click(function() {
+				if (!$(this).is('.active')) {
+					$('.nav-box').hide();
+					$('.Nblock').removeClass('active');
+					$(this).toggleClass('active');
+
+					var id = $(this).attr("id");
+					id = id.replace(/P/, "");
+					$("#" + id).show();
+				} else {
+					$('.nav-box').hide();
+					$(this).toggleClass('active');
+				}
+				$(".ui-selected").removeClass("ui-selected");
+				$('.set-first').show().siblings().hide();
+				return false;
+			});
+
+			//范围栏图片切换
+			$('#S1P').addClass('active');
+			$('.Sblock').click(function() {
+				if (!$(this).is('.active')) {
+					$('.scp-box').hide();
+					$('.Sblock').removeClass('active');
+					$(this).toggleClass('active');
+					var id = $(this).attr("id");
+					id = id.replace(/P/, "");
+					$("#" + id).show();
+				} else {
+					$('.scp-box').hide();
+					$(this).toggleClass('active');
+				}
+				$(".ui-selected").removeClass("ui-selected");
+				$('.set-first').show().siblings().hide();
+				return false;
+			});
+
+			//标签栏图片切换
+			$('#B2P').addClass('active');
+			$('.Bblock').click(function() {
+				if (!$(this).is('.active')) {
+					$('.bar-box').hide();
+					$('.Bblock').removeClass('active');
+					$(this).toggleClass('active');
+					var id = $(this).attr("id");
+					id = id.replace(/P/, "");
+					$("#" + id).show();
+				} else {
+					$('.bar-box').hide();
+					$(this).toggleClass('active');
+				}
+				$(".ui-selected").removeClass("ui-selected");
+				$('.set-first').show().siblings().hide();
+				return false;
+			});
+
+			//-----------------------------------------------------------------------------------------------
+			//选中控件
+			$(".element-field").on("click", ".ele-box", function() {
+				if (!$(this).hasClass("ui-selected")) {
+					$(this).addClass("ui-selected").siblings().removeClass("ui-selected");
+					$(this).parent().siblings().children().removeClass("ui-selected");
+					var id = $(this).attr("id");
+					var orig_id = id.replace(/(_).*/, "");
+					var form_id = orig_id + "S";
+
+					$("#" + form_id).hide(5).show().addClass("isShow").siblings().removeClass("isShow").hide();
+
+					var length = $("#" + form_id + " input").length;
+					for (var i = 0; i < length; i++) {
+						var temId = $($("#" + form_id + " input")[i]).attr("id");
+						temId = temId.replace(/_I/, "");
+						$($("#" + form_id + " input")[i]).val($("#" + id + " #" + temId).html());
+						$($("#" + form_id + " input")[i]).attr("name", id);
+					}
+					$("select").attr("name", id);
+				} else {
+					$(this).removeClass("ui-selected");
+					$('.set-first').hide(5).show().siblings().hide();
+				}
+			});
+
+			//选中栏
+			$(".nav-box,.scp-box,.bar-box").on("click", function() {
+				if (!$(this).hasClass("ui-selected")) {
+					$(this).addClass("ui-selected").siblings().removeClass("ui-selected");
+					$(this).parent().siblings().children().removeClass("ui-selected");
+					var id = $(this).attr("id");
+					var form_id = id + "S";
+					$("#" + form_id).hide(5).show().addClass("isShow").siblings().removeClass("isShow").hide();
+
+					var length = $("#" + form_id + " input").length;
+					for (var i = 0; i < length; i++) {
+						var temId = $($("#" + form_id + " input")[i]).attr("id");
+						temId = temId.replace(/_I/, "");
+						$($("#" + form_id + " input")[i]).val($("#" + temId).html());
+					}
+					$("select").attr("name", id);
+				} else {
+					$(this).removeClass("ui-selected");
+					$('.set-first').hide(5).show().siblings().hide();
+				}
+			});
+
+			//-----------------------------------------------------------------------------------------------
+			//element-field中的控件排序
+			$(".element-field").sortable({
+				axis: "y",
+				connectWith: ".element-field",
+				opacity: .8,
+				placeholder: "portlet-placeholder",
+				stop: function(e, t) {
+					$(t.item).siblings().removeClass("ui-selected");
+					$(t.item).parent().siblings().children().removeClass("ui-selected");
+				}
+			});
+
+			//-----------------------------------------------------------------------------------------------
+			//凡是设置了data的img均支持拖动
+			$("img").draggable({
+				connectToSortable: ".element-field",
+				helper: function(event) {
+					return $(this).clone().data("ele");
+				},
+				drag: function(e, t) {
+					$(t.helper).css("z-index", 9999);
+					$('.leading').fadeOut(200);
+					$('.tips').fadeOut(200);
+				},
+				stop: function(e, t) {
+					//对每个拖出来的控件动态赋予不同的id
+					var id = $(t.helper).attr("id");
+					id = id + "_" + 1000000 * Math.random();
+					id = id.replace(/(\.).*/, "");
+					$(t.helper).attr("id", id);
+					$(t.helper).siblings().removeClass("ui-selected");
+				}
+			});
+
+			//-----------------------------------------------------------------------------------------------
+			//修改表单信息
+
+			$("input").on("keyup", function() {
+				var val = $(this).val();
+				var id = $(this).attr("id");
+				var orig_id = $(this).attr("name");
+				id = id.replace(/_I/, "");
+				if (orig_id.length && orig_id.length == 1) {
+					$(" #" + id).html(val);
+				} else {
+					$("#" + orig_id + " #" + id).html(val);
+				}
+			});
+
+			//修改图标
+			$("select").on("change", function() {
+				var val = $(this).val();
+				var imgClass = val.replace(/icon-/, "");
+				var orig_id = $(this).attr("name");
+				var icon_Order = $(this).prev().text().replace(/\s+/g, "").replace(/:/, "");
+				var imgSrc = $("." + imgClass).children().attr("src");
+				if (val == "--请选择--") {
+					$("#" + orig_id + " ." + icon_Order).children().show().attr("src", "images/icon-normal.svg");
+				} else if (val == "no-icon") {
+					$("#" + orig_id + " ." + icon_Order).children().hide();
+				} else {
+					$("#" + orig_id + " ." + icon_Order).children().show().attr("src", imgSrc);
+				}
+			});
+
+			//-----------------------------------------------------------------------------------------------
+			//删除控件
+
+			$('.delete').click(function() {
+				$('.ui-selected').hide(200);
+				$(".set-box").hide(200);
+				$('.set-first').show(200);
+			});
+
+			//-----------------------------------------------------------------------------------------------
+			//全局设置
+
+			$('#inset').click(function() {
+				if (!$(this).is('.checked')) {
+					$('.status-field').css('opacity', 0);
+					$(this).toggleClass('checked');
+				} else {
+					$('.status-field').css('opacity', 1.0);
+					$(this).toggleClass('checked');
+				}
+			});
+
+			$('#inset2').click(function() {
+				$('.mockup').toggle();
+			});
+
+			//-----------------------------------------------------------------------------------------------
+
+			$(".tipsClass1").hover(function() {
+				$(this).find(".tipstutorials1").animate({
+					opacity: "show",
+					top: "15",
+				}, "fast");
+			}, function() {
+				$(this).find(".tipstutorials1").animate({
+					opacity: "hide",
+					top: "0"
+				}, "fast");
+			});
+			$(".tipsClass2").hover(function() {
+				$(this).find(".tipstutorials2").animate({
+					opacity: "show",
+					top: "75",
+				}, "fast");
+			}, function() {
+				$(this).find(".tipstutorials2").animate({
+					opacity: "hide",
+					top: "60"
+				}, "fast");
+			});
+			$(".tipsClass3").hover(function() {
+				$(this).find(".tipstutorials3").animate({
+					opacity: "show",
+					top: "135",
+				}, "fast");
+			}, function() {
+				$(this).find(".tipstutorials3").animate({
+					opacity: "hide",
+					top: "120"
+				}, "fast");
+			});
+			$(".tipsClass4").hover(function() {
+				$(this).find(".tipstutorials4").animate({
+					opacity: "show",
+					top: "195",
+				}, "fast");
+			}, function() {
+				$(this).find(".tipstutorials4").animate({
+					opacity: "hide",
+					top: "180"
+				}, "fast");
+			});
+			$(".tipsClass5").hover(function() {
+				$(this).find(".tipstutorials5").animate({
+					opacity: "show",
+					top: "255",
+				}, "fast");
+			}, function() {
+				$(this).find(".tipstutorials5").animate({
+					opacity: "hide",
+					top: "240"
+				}, "fast");
+			});
+			$(".tipsClass6").hover(function() {
+				$(this).find(".tipstutorials6").animate({
+					opacity: "show",
+					top: "315",
+				}, "fast");
+			}, function() {
+				$(this).find(".tipstutorials6").animate({
+					opacity: "hide",
+					top: "300"
+				}, "fast");
+			});
+			$(".tipsClass7").hover(function() {
+				$(this).find(".tipstutorials7").animate({
+					opacity: "show",
+					top: "375",
+				}, "fast");
+			}, function() {
+				$(this).find(".tipstutorials7").animate({
+					opacity: "hide",
+					top: "360"
+				}, "fast");
+			});
+
+			$(".interface").hover(function() {
+				$(".tipstutorials8").animate({
+					opacity: "show",
+					top: "290",
+				}, "fast");
+			}, function() {
+				$(".tipstutorials8").animate({
+					opacity: "hide",
+					top: "270"
+				}, "fast");
+			});
+			//-----------------------------------------------------------------------------------------------
+
+			$(".author").click(function() {
+				$('#cover').fadeIn(200); //显示遮罩层
+				$('#modal').show(); //显示弹出层
+			});
+			$("#cover").click(function() {
+				$('#cover').fadeOut(200); //显示遮罩层
+				$('#modal').hide(); //显示弹出层
+			});
+
+
+			Date.prototype.format = function(fmt) {
+				var year = this.getFullYear();
+				var month = this.getMonth() + 1;
+				var date = this.getDate();
+				var hour = this.getHours();
+				var minute = this.getMinutes();
+				var second = this.getSeconds();
+
+				fmt = fmt.replace("yyyy", year);
+				fmt = fmt.replace("yy", year % 100);
+				fmt = fmt.replace("MM", fix(month));
+				fmt = fmt.replace("dd", fix(this.getDate()));
+				fmt = fmt.replace("hh", fix(this.getHours()));
+				fmt = fmt.replace("mm", fix(this.getMinutes()));
+				fmt = fmt.replace("ss", fix(this.getSeconds()));
+				return fmt;
+
+				function fix(n) {
+					return n < 10 ? "0" + n : n;
+				}
+			}
+
+			$(".set-button").on("click", function() {
+				$(".ui-selected").removeClass("ui-selected");
+
+				html2canvas($("#interface"), {
+					dpi: 400,
+					onrendered: function(canvas) {
+						//Canvas2Image.saveAsPNG(canvas);
+						var type = 'png';
+						var imgData = canvas.toDataURL(type);
+						var _fixType = function(type) {
+							type = type.toLowerCase().replace(/jpg/i, 'jpeg');
+							var r = type.match(/png|jpeg|bmp|gif/)[0];
+							return 'image/' + r;
+						};
+
+						// 加工image data，替换mime type
+						imgData = imgData.replace(_fixType(type), 'image/octet-stream');
+
+						var saveFile = function(data, filename) {
+							var save_link = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
+							save_link.href = data;
+							save_link.download = filename;
+
+							var event = document.createEvent('MouseEvents');
+							event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+							save_link.dispatchEvent(event);
+						};
+						var time = new Date().format("yyyyMMddhhmmss");
+						// 下载后的问题名
+						var filename = time + '.' + type;
+						// download
+						saveFile(imgData, filename);
+					}
+				});
+			});
+
+
+		});
+	</script>
+
+	<!---------------------------------------------------------------------------------------->
+
+</body>
+
+</html>
