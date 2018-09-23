@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="178px" height="140px" viewBox="0 0 178 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>S1A</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Atomframer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="筛选栏-copy-3" transform="translate(-15.000000, -34.000000)">
+            <g id="S1A" transform="translate(15.000000, 34.000000)">
+                <rect id="Rectangle-13" fill="#FFFFFF" x="0" y="0" width="178" height="140" rx="3"></rect>
+                <path d="M39.8,44 L138.2,44 L138.2,44 C140.850967,44 143,46.1490332 143,48.8 L143,63.2 C143,65.8509668 140.850967,68 138.2,68 L39.8,68 L39.8,68 C37.1490332,68 35,65.8509668 35,63.2 L35,48.8 L35,48.8 C35,46.1490332 37.1490332,44 39.8,44 L39.8,44 Z M46.8,50 C44.1490332,50 42,52.1490332 42,54.8 L42,54.8 L42,57.2 C42,59.8509668 44.1490332,62 46.8,62 L130.8,62 C133.450967,62 135.6,59.8509668 135.6,57.2 L135.6,57.2 L135.6,54.8 C135.6,52.1490332 133.450967,50 130.8,50 L46.8,50 Z M47.6,52.6 L89,52.6 L89,59.6 L47.6,59.6 C45.9431458,59.6 44.6,58.2568542 44.6,56.6 L44.6,55.6 C44.6,53.9431458 45.9431458,52.6 47.6,52.6 Z" id="Combined-Shape" fill="#007AFF"></path>
+                <text id="2x-分段控件范围栏" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" fill="#007AFF">
+                    <tspan x="38.348" y="110">2x 分段控件范围栏</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

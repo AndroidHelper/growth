@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="178px" height="140px" viewBox="0 0 178 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>N2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Atomframer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="导航栏-copy-2" transform="translate(-206.000000, -34.000000)">
+            <g id="N2" transform="translate(206.000000, 34.000000)">
+                <rect id="Rectangle-13-Copy" fill="#FFFFFF" x="0" y="0" width="178" height="140" rx="3"></rect>
+                <g id="Group-3" transform="translate(35.000000, 44.000000)">
+                    <path d="M4.8,0 L103.2,0 L103.2,-8.8817842e-16 C105.850967,5.68844139e-15 108,2.1490332 108,4.8 L108,19.2 C108,21.8509668 105.850967,24 103.2,24 L4.8,24 L4.8,24 C2.1490332,24 6.23189498e-15,21.8509668 3.55271368e-15,19.2 L0,4.8 L-8.8817842e-16,4.8 C-1.21282822e-15,2.1490332 2.1490332,-1.28938214e-15 4.8,-1.77635684e-15 L4.8,0 Z M76.8,9.6 L76.8,15.6 L99.6,15.6 L99.6,9.6 L76.8,9.6 Z" id="Combined-Shape" fill="#404040"></path>
+                    <g id="Group" transform="translate(8.400000, 6.000000)" fill="#FFFFFF">
+                        <path d="M8.19411255,5.93969696 L12.4367532,1.69705627 L10.739697,8.8817842e-16 L5.64852814,5.09116882 L4.8,5.93969696 L10.739697,11.8793939 L12.4367532,10.1823376 L8.19411255,5.93969696 Z" id="Combined-Shape-Copy"></path>
+                        <path d="M3.99411255,5.93969696 L8.23675324,1.69705627 L6.53969696,8.8817842e-16 L1.44852814,5.09116882 L0.6,5.93969696 L6.53969696,11.8793939 L8.23675324,10.1823376 L3.99411255,5.93969696 Z" id="Combined-Shape-Copy-4" transform="translate(4.418377, 5.939697) scale(-1, 1) translate(-4.418377, -5.939697) "></path>
+                    </g>
+                </g>
+                <text id="模态页面导航栏" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" fill="#767676">
+                    <tspan x="47" y="110">模态页面导航栏</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
